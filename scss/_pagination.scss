@@ -1,0 +1,83 @@
+.pagination {
+    color: var(--n-gray);
+    list-style: none;
+    display: flex;
+    padding: 0;
+
+    li {
+        padding: 0.5rem 1rem;
+        background: color-mix(in srgb, currentColor 15%, white);
+        transition: 0.2s all;
+        cursor: pointer;
+
+        &:hover {
+            background: color-mix(in srgb, currentColor 5%, white);
+            color: var(--n-text-color);
+        }
+
+        &.disabled {
+            color: var(--n-gray);
+            pointer-events: none;
+            background: color-mix(in srgb, currentColor 5%, white);
+        }
+
+        &.active {
+            transform: scale(1.1);
+            pointer-events: none;
+            border: 2px solid;
+        }
+    }
+
+    &.pag-disjoint {
+        li {
+            margin: 0 0.2rem;
+        }
+    }
+
+    &.pag-bordered {
+
+        li {
+            border: 1px solid currentColor;
+        }
+
+        li:hover {
+            border-color: var(--n-gray);
+        }
+
+        &:not(.pag-disjoint) li {
+            border-right: none;
+        }
+
+        &:not(.pag-disjoint) li:last-child,
+        &.pag-disjoint li {
+            border-right: 1px solid currentColor;
+
+            &:hover {
+                border-color: var(--n-gray);
+            }
+        }
+
+        &:not(.pag-disjoint) li.disabled:last-child {
+            border-right: none;
+        }
+
+        li.disabled {
+            border: none;
+            border-right: none;
+        }
+
+        li.active {
+            border: 2px solid currentColor;
+            border-right: 2px solid currentColor;
+        }
+    }
+}
+
+nav ul.pagination li.disabled {
+    color: var(--n-gray);
+}
+
+.pagination li a {
+    text-decoration: none;
+    color: currentColor;
+}

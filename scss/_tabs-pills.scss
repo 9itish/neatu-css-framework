@@ -1,0 +1,86 @@
+ul.n-tabs li,
+ul.n-pills li {
+    width: fit-content;
+    padding: 0.3em 0.6em;
+    border: 2px solid transparent;
+    line-height: 1;
+    font-size: 1em;
+    transition: 0.2s all;
+    margin-right: 2px;
+    margin-bottom: -2px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+ul.n-pills li {
+    padding: 0;
+}
+
+ul.n-tabs li:hover {
+    border: 2px solid color-mix(in srgb, currentColor 75%, white);
+}
+
+ul.n-tabs li.active {
+    border: 2px solid color-mix(in srgb, currentColor 75%, black);
+}
+
+ul.n-tabs li.active,
+ul.n-tabs li:hover {
+    border-bottom: 2px solid white;
+}
+
+ul.n-tabs,
+ul.n-pills {
+    border-bottom: 2px solid color-mix(in srgb, currentColor 75%, black);
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: calc(var(--n-base-margin)*5);
+}
+
+ul.n-pills {
+    border-bottom: 0;
+}
+
+ul.n-tabs li a {
+    text-decoration: none;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+.n-tabs .n-btn {
+    background: white;
+    color: inherit;
+    padding: 0;
+}
+
+.n-tabs li.active .n-btn {
+    font-weight: bold;
+    color: color-mix(in srgb, currentColor 75%, black);
+}
+
+.n-pills li:not(.active) .n-btn {
+    background: white;
+}
+
+ul.n-tabs {
+    margin-bottom: 0;
+}
+
+.n-tabs+.tab-content {
+    border-top: 0;
+}
+
+.vertical-pills+.tab-content {
+    border-left: 0.5em solid white;
+}
+
+.n-pills.vertical-pills li,
+.n-pills.vertical-pills li button {
+    width: 100%;
+}

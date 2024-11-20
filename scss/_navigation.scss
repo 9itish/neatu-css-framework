@@ -1,0 +1,120 @@
+.n-navigation {
+    display: flex;
+    justify-content: end;
+    padding: calc(var(--n-base-padding)*4) calc(var(--n-base-padding)*8);
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav.n-navigation .n-navlink-group {
+    flex: 1 0 100%;
+    justify-content: end;
+}
+
+nav.n-navigation.shrinker .n-navlink-group {
+    flex: 1 0 100%;
+}
+
+.nav-brand {
+    font-size: 3rem;
+}
+
+.n-navigation.shrinker ol {
+    display: flex;
+}
+
+.n-navigation.shrinker .n-navlink-group ol {
+    display: none;
+}
+
+.n-navigation.shrinker .n-navlink-group ol {
+    display: none;
+}
+
+.n-navigation.shrinker .menu-opener.visible {
+    display: inline-block;
+    margin-left: 2rem;
+}
+
+.n-navigation .menu-opener.open-menu ~ div.n-navlink-group {
+    border-top: 1px solid color-mix(in srgb, currentColor 40%, white);;
+    margin-top: calc(var(--n-base-margin) * 3);
+    padding-top: calc(var(--n-base-padding) * 3);
+}
+
+.n-navigation .menu-opener.open-menu~div.n-navlink-group ol {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1 0 100%;
+}
+
+.n-navigation>* {
+    width: fit-content;
+}
+
+.n-navigation ol {
+    font-size: 1.5rem;
+    display: none;
+    list-style: none;
+    gap: 1rem;
+    margin: calc(var(--n-small-margin)/2) 0;
+    padding-left: 0;
+}
+
+.n-navigation .nav-brand {
+    margin-right: auto;
+}
+
+.n-navigation a {
+    text-decoration: none;
+    transition: 0.1s all;
+    color: inherit;
+    display: inline-block;
+}
+
+.n-navigation a:hover {
+    transform: scale(1.1);
+    -webkit-text-stroke: 1px;
+}
+
+.n-navlink-group {
+    display: flex;
+    flex: 1 0 100%;
+}
+
+.n-navigation .n-navigation.n-nav-pilled ol a {
+    background: white;
+    padding: calc(var(--n-base-padding)*6);
+}
+
+.n-navigation.n-nav-pilled ol a:hover {
+    font-weight: normal;
+    color: white;
+}
+
+.menu-opener {
+    font-size: 200%;
+    cursor: pointer;
+}
+
+@media (min-width: map-get($viewport-widths, 'm')) {
+
+    .n-navigation .menu-opener {
+        display: none;
+    }
+
+    nav.n-navigation .n-navlink-group {
+        flex: 1 0 auto;
+    }
+
+    .n-navlink-group ol {
+        display: flex;
+    }
+
+    .n-navigation .menu-opener.open-menu~div.n-navlink-group ol {
+        display: flex;
+        gap: 1rem;
+    }
+    
+}

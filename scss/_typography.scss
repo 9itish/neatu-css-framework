@@ -1,0 +1,52 @@
+.txt-center {
+    text-align: center;
+}
+
+.txt-start {
+    text-align: start;
+}
+
+.txt-end {
+    text-align: end;
+}
+
+$index: 0;
+
+@each $element in (h1, h2, h3, h4, h5, h6, p) {
+
+    $index: $index + 1;
+    
+    #{$element} {
+      margin: calc(max(6 - $index, 4) * var(--n-base-margin)) 0;
+      font-size: calc((16 - $index) * var(--n-base-font-size)/8);
+      line-height: max(1.8 - $index/10, 1.5);
+    }
+}  
+
+ol,
+ul {
+    padding-left: calc(var(--n-base-padding) * 6);
+    margin: calc(var(--n-base-margin) * 6) 0;
+}
+
+code {
+    background: #E0E0E0;
+    display: inline-block;
+    padding: 0 0.2rem;
+}
+
+.t-em {
+    font-weight: bold;
+}
+
+.t-uline {
+    text-decoration: 4px underline;
+}
+
+.c-inherit {
+    color: currentColor;
+}
+
+a.c-inherit:hover {
+    color: color-mix(in srgb, currentColor 80%, black);
+}

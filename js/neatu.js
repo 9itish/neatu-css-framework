@@ -178,11 +178,11 @@ function adjustingMenu(menu_id) {
 
 }
 
-// window.addEventListener("resize", () => adjustingMenu('shrinker-menu'));
-// adjustingMenu('shrinker-menu');
+window.addEventListener("resize", () => adjustingMenu('shrinker-menu'));
+adjustingMenu('shrinker-menu');
 
-// window.addEventListener("resize", () => adjustingMenu('shrinker-menu-a'));
-// adjustingMenu('shrinker-menu-a');
+window.addEventListener("resize", () => adjustingMenu('shrinker-menu-a'));
+adjustingMenu('shrinker-menu-a');
 
 let closeElems = document.querySelectorAll(".n-closer");
 
@@ -202,7 +202,6 @@ function removeClasses(elementObject, classesString) {
   const classes = classesString.split(' ');
 
   for (const class_name of classes) {
-    console.log(`removeClasses was called to remove ${class_name}!`);
     elementObject.classList.remove(class_name);
   }
 
@@ -218,6 +217,18 @@ function addClasses(elementObject, classesString) {
   }
 
   return elementObject;
+}
+
+let parentsWithChildClasses = document.querySelectorAll("[data-neat-child-classes]");
+
+for (const parent of parentsWithChildClasses) {
+
+  const classString = parent.getAttribute('data-neat-child-classes');
+
+  for (const child of parent.children) {
+    addClasses(child, classString);
+  }
+  
 }
 
 let openElems = document.querySelectorAll(".n-opener");

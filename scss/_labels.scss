@@ -1,0 +1,94 @@
+.bgh {
+    background: black;
+    color: white;
+}
+
+.bglh {
+    color: black;
+    background: white;
+}
+
+.bgh,
+.bglh,
+.tch,
+.tclh {
+    cursor: pointer;
+    transition: 0.2s all;
+}
+
+.tc-white {
+    color: white;
+}
+
+@each $name, $color in $colors {
+
+    .tc-#{$name},
+    .tch-#{$name} {
+        color: var(--n-#{$name}-color);
+
+        // &.n-alert,
+        // &.pagination li {
+        //     color: var(--n-#{$name}-color);
+        // }
+    }
+
+    .tcl-#{$name},
+    .tclh-#{$name} {
+        color: color-mix(in srgb, var(--n-#{$name}-color) 50%, white);
+
+        &.n-alert,
+        &.pagination li {
+            color: var(--n-#{$name}-color);
+        }
+    }
+
+    .tch-#{$name} {
+        &:hover {
+            color: color-mix(in srgb, var(--n-#{$name}-color) 85%, black);
+        }
+
+        &.n-alert:hover,
+        &.pagination li:hover {
+            color: white;
+            background: color-mix(in srgb, var(--n-#{$name}-color) 85%, black);
+        }
+    }
+
+    .tclh-#{$name} {
+        &:hover {
+            color: color-mix(in srgb, var(--n-#{$name}-color) 70%, white);
+        }
+
+        &.n-alert:hover,
+        &.pagination li:hover {
+            color: black;
+            background: color-mix(in srgb, var(--n-#{$name}-color) 50%, white);
+        }
+    }
+
+    .bg-#{$name},
+    .bgh-#{$name} {
+        background: var(--n-#{$name}-color);
+    }
+
+    .bgl-#{$name},
+    .bglh-#{$name} {
+        background: color-mix(in srgb, var(--n-#{$name}-color) 50%, white);
+    }
+
+    .bgle-#{$name} {
+        background: color-mix(in srgb, var(--n-#{$name}-color) 15%, white);
+    }
+
+    .bgh-#{$name} {
+        &:hover {
+            background: color-mix(in srgb, var(--n-#{$name}-color) 85%, black);
+        }
+    }
+
+    .bglh-#{$name} {
+        &:hover {
+            background: color-mix(in srgb, var(--n-#{$name}-color) 70%, white);
+        }
+    }
+}

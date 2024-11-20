@@ -1,0 +1,64 @@
+@import 'variables';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: var(--n-base-font-size);
+    line-height: 1.6;
+}
+
+@import 'grid';
+@import 'flexbox';
+
+@import 'typography';
+
+@import 'table';
+
+@import 'navigation';
+@import 'pagination';
+
+@import 'image-figure';
+@import 'accordion';
+
+@import 'form';
+
+@import 'shadow-border-outline';
+
+@import 'alerts';
+@import 'tabs-pills';
+@import 'labels';
+
+@import 'cards';
+
+@import 'buttons';
+
+@import 'item-group';
+
+@import 'padding-margin';
+@import 'round';
+
+
+hr {
+    color: color-mix(in srgb, currentColor 25%, white);
+}
+
+
+.fade {
+    transition: 0.2s all;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+.hide {
+    display: none;
+}
