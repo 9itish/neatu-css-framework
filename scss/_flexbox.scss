@@ -73,16 +73,6 @@
     gap: var(--n-base-gap);
 }
 
-.n-flex-fw .n-fw {
-    flex: auto;
-}
-
-@for $i from 1 through 20 {
-    .n-w-#{$i*5} {
-        width: $i * 5%;
-    }
-}
-
 @for $i from 1 through 5 {
     .n-gap-x#{$i} {
         gap: calc(var(--n-base-unit)*($i / 5));
@@ -289,5 +279,9 @@
             width: $i * 5%;
         }
     }
+}
+
+.n-flex-fw .n-fw {
+    flex: auto;
 }
 

@@ -25,12 +25,6 @@ $fractional-widths: (
 );
 
 :root {
-    --n-base-unit: 1rem;
-    --n-base-font-size: 1rem;
-    --n-base-padding: 0.1rem;
-    --n-base-margin: 0.1rem;
-    --n-border-width: 1px;
-    --n-border-radius: 0.2em;
     --n-green-color: #4CAF50;
     --n-red-color: #E53935;
     --n-orange-color: #F57C00;
@@ -60,7 +54,7 @@ $fractional-widths: (
     :root {
         --n-base-padding: 0.18rem;
         --n-base-margin: 0.18rem;
-        --n-root-font-size: 1rem;
+        --n-base-font-size: 1rem;
     }
 }
 
@@ -75,7 +69,7 @@ $fractional-widths: (
     :root {
         --n-base-padding: 0.24rem;
         --n-base-margin: 0.24rem;
-        --n-root-font-size: 1.1rem;
+        --n-base-font-size: 1.1rem;
     }
 }
 
