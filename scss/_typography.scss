@@ -10,7 +10,25 @@
     text-align: end;
 }
 
+.txt-xs {
+    font-size: 70%;
+}
+
+.txt-sm {
+    font-size: 85%;
+}
+
+.txt-lg {
+    font-size: 115%;
+}
+
+.txt-xl {
+    font-size: 130%;
+}
+
 $index: 0;
+
+$multipliers: (2.2, 1.6, 1.4, 1.3, 1.2, 1, 1);
 
 @each $element in (h1, h2, h3, h4, h5, h6, p) {
 
@@ -18,21 +36,36 @@ $index: 0;
     
     #{$element} {
       margin: calc(max(6 - $index, 4) * var(--n-base-margin)) 0;
-      font-size: calc((16 - $index) * var(--n-base-font-size)/8);
-      line-height: max(1.8 - $index/10, 1.5);
+      font-size: calc(nth($multipliers, $index) * var(--n-base-font-size));
     }
 }  
+
+h1, h2, h3, h4, h5, h6, p {
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+}
 
 ol,
 ul {
     padding-left: calc(var(--n-base-padding) * 6);
     margin: calc(var(--n-base-margin) * 6) 0;
+
+    li {
+        margin: calc(2 * var(--n-base-margin)) 0;
+    }
+}
+
+pre code {
+    padding: calc(var(--n-base-padding)*4) calc(var(--n-base-padding) * 2);
 }
 
 code {
-    background: #E0E0E0;
+    background: color-mix(in srgb, white 90%, var(--n-text-color));
     display: inline-block;
-    padding: calc(var(--n-base-padding) * 4);
+    padding: calc(var(--n-base-padding)/4) calc(var(--n-base-padding) * 2);
 }
 
 .t-em {
@@ -41,6 +74,10 @@ code {
 
 .t-uline {
     text-decoration: 4px underline;
+}
+
+.t-noline {
+    text-decoration: none;
 }
 
 .c-inherit {

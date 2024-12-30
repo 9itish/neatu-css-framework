@@ -5,10 +5,8 @@
     padding: 0;
 
     li {
-        padding: 0.5rem 1rem;
         background: color-mix(in srgb, currentColor 15%, white);
         transition: 0.2s all;
-        cursor: pointer;
 
         &:hover {
             background: color-mix(in srgb, currentColor 5%, white);
@@ -80,4 +78,6 @@ nav ul.pagination li.disabled {
 .pagination li a {
     text-decoration: none;
     color: currentColor;
+    padding: calc(2 * var(--n-base-padding)) calc(4 * var(--n-base-padding));
+    display: inline-block;
 }

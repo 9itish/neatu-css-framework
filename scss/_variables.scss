@@ -1,12 +1,12 @@
 $colors: (
-    'green': #4CAF50,
-    'red': #E53935,
-    'orange': #F57C00,
-    'azure': #2196F3,
+    'success': #4CAF50,
+    'failure': #E53935,
+    'warning': #F57C00,
+    'neutral': #2196F3,
     'text': #222222,
     'border': #AAAAAA,
     'brand-primary': #00796B,
-    'brand-secondary': #0c3671
+    'brand-secondary': #0C3671
 );
 
 $viewport-widths: (
@@ -25,19 +25,19 @@ $fractional-widths: (
 );
 
 :root {
-    --n-green-color: #4CAF50;
-    --n-red-color: #E53935;
-    --n-orange-color: #F57C00;
-    --n-azure-color: #2196F3;
+    --n-success-color: #4CAF50;
+    --n-failure-color: #E53935;
+    --n-warning-color: #F57C00;
+    --n-neutral-color: #2196F3;
     --n-text-color: #222222;
     --n-border-color: #AAAAAA;
     --n-brand-primary-color: #00796B;
-    --n-brand-secondary-color: #0c3671;
+    --n-brand-secondary-color: #0C3671;
 }
 
 :root {
     --n-base-unit: 1rem;
-    --n-base-font-size: 1rem;
+    --n-base-font-size: 16px;
 
     --n-base-padding: 0.15rem;
     --n-base-margin: 0.15rem;
@@ -54,7 +54,6 @@ $fractional-widths: (
     :root {
         --n-base-padding: 0.18rem;
         --n-base-margin: 0.18rem;
-        --n-base-font-size: 1rem;
     }
 }
 
@@ -62,6 +61,7 @@ $fractional-widths: (
     :root {
         --n-base-padding: 0.2rem;
         --n-base-margin: 0.2rem;
+        --n-base-font-size: 17px;
     }
 }
 
@@ -69,7 +69,6 @@ $fractional-widths: (
     :root {
         --n-base-padding: 0.24rem;
         --n-base-margin: 0.24rem;
-        --n-base-font-size: 1.1rem;
     }
 }
 
@@ -77,6 +76,7 @@ $fractional-widths: (
     :root {
         --n-base-padding: 0.28rem;
         --n-base-margin: 0.28rem;
+        --n-base-font-size: 18px;
     }
 }
 

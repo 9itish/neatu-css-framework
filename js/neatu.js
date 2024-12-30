@@ -178,12 +178,6 @@ function adjustingMenu(menu_id) {
 
 }
 
-window.addEventListener("resize", () => adjustingMenu('shrinker-menu'));
-adjustingMenu('shrinker-menu');
-
-window.addEventListener("resize", () => adjustingMenu('shrinker-menu-a'));
-adjustingMenu('shrinker-menu-a');
-
 let closeElems = document.querySelectorAll(".n-closer");
 
 for(closeElem of closeElems) {

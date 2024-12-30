@@ -437,24 +437,24 @@ function generateRandomPlaceholderUrl($text = '', $def_width = false)
                     <th>How it Looks</th>
                 </tr>
                 <tr>
-                    <td>--n-green-color</td>
+                    <td>--n-success-color</td>
                     <td>#4CAF50</td>
-                    <td class="bg-green"></td>
+                    <td class="bg-success"></td>
                 </tr>
                 <tr>
-                    <td>--n-red-color</td>
+                    <td>--n-failure-color</td>
                     <td>#E53935</td>
-                    <td class="bg-red"></td>
+                    <td class="bg-failure"></td>
                 </tr>
                 <tr>
-                    <td>--n-orange-color</td>
+                    <td>--n-warning-color</td>
                     <td>#F57C00</td>
-                    <td class="bg-orange"></td>
+                    <td class="bg-warning"></td>
                 </tr>
                 <tr>
-                    <td>--n-azure-color</td>
+                    <td>--n-neutral-color</td>
                     <td>#2196F3</td>
-                    <td class="bg-azure"></td>
+                    <td class="bg-neutral"></td>
                 </tr>
             </table>
         </div>
@@ -505,37 +505,37 @@ function generateRandomPlaceholderUrl($text = '', $def_width = false)
 
     <h3>Set Text Color</h3>
 
-    <p>You can add the prefix <code>tc-</code> (<b>T</b>ext <b>C</b>olor) before all these color names to set text color. For example, using the classes <code>tc-azure</code>, <code>tc-red</code>, or <code>tc-green</code> on different elements will set their color to <span class="tc-azure">azure</span>, <span class="tc-red">red</span>, and <span class="tc-green">green</span>.</p>
+    <p>You can add the prefix <code>tc-</code> (<b>T</b>ext <b>C</b>olor) before all these color names to set text color. For example, using the classes <code>tc-neutral</code>, <code>tc-failure</code>, or <code>tc-success</code> on different elements will set their color to <span class="tc-neutral">azure</span>, <span class="tc-failure">red</span>, and <span class="tc-success">green</span>.</p>
 
     <p>Apply these classes to any element which has text whose color you want to change.</p>
 
-    <pre><code class="lang-html">&lt;h2 class="tc-azure no-mar"&gt;An Azure Colored Heading.&lt;/h2&gt;
-&lt;a href="#link" class="tc-green"&gt;A mint green link.&lt;/a&gt;
-&lt;p class="tc-ember-red"&gt;For instance, here is a paragraph with ember red text. Multiple &lt;code&gt;span&lt;/code&gt; elements within it have &lt;span class="tc-azure"&gt;azure color&lt;/span&gt;, &lt;span class="tc-mint-green"&gt;mint green color&lt;/span&gt;, and &lt;span class="tc-ruby"&gt;ruby color&lt;/span&gt;.&lt;/p&gt;</code></pre>
+    <pre><code class="lang-html">&lt;h2 class="tc-neutral no-mar"&gt;An Azure Colored Heading.&lt;/h2&gt;
+&lt;a href="#link" class="tc-success"&gt;A mint green link.&lt;/a&gt;
+&lt;p class="tc-ember-failure"&gt;For instance, here is a paragraph with ember red text. Multiple &lt;code&gt;span&lt;/code&gt; elements within it have &lt;span class="tc-neutral"&gt;azure color&lt;/span&gt;, &lt;span class="tc-mint-success"&gt;mint green color&lt;/span&gt;, and &lt;span class="tc-ruby"&gt;ruby color&lt;/span&gt;.&lt;/p&gt;</code></pre>
 
     <div class="result n-round n-bshadow">
         <h2 class="tc-brand-primary no-mar">Heading with Primary Brand Color.</h2>
         <a href="#link" class="tc-brand-secondary">Link with Secondary Brand Color.</a>
-        <p class="tc-red">For instance, here is a paragraph with red text. Multiple <code>span</code> elements within it have <span class="tc-azure">azure color</span>, <span class="tc-green">green color</span>, and <span class="tc-orange">orange color</span>.</p>
+        <p class="tc-failure">For instance, here is a paragraph with red text. Multiple <code>span</code> elements within it have <span class="tc-neutral">azure color</span>, <span class="tc-success">green color</span>, and <span class="tc-warning">orange color</span>.</p>
     </div>
 
     <h3>Change Text Color on Hover</h3>
 
     <p>Use the prefix <code>tch-</code> (<b>T</b>ext <b>C</b>olor <b>H</b>over) with different color names to change the text color on hover. Hovering over the element will change the text color to 85% original and 15% black.</p>
 
-    <p>For instance, you can use the class <code>tch-azure</code> to <span class="tch-azure">set the text color to Azure</span> or <code class="bg-azure tc-white s-pad-x2">#2196F3</code>. When you hover over the azure text, the color will change to <span class="tc-white s-pad-x2" style="background: #1C7FCE;">#1C7FCE</span>.</p>
+    <p>For instance, you can use the class <code>tch-neutral</code> to <span class="tch-neutral">set the text color to Azure</span> or <code class="bg-neutral tc-white s-pad-x2">#2196F3</code>. When you hover over the azure text, the color will change to <span class="tc-white s-pad-x2" style="background: #1C7FCE;">#1C7FCE</span>.</p>
 
     <p>Use the prefix <code>tclh-</code> (<b>T</b>ext <b>C</b>olor <b>L</b>ight <b>H</b>over) to start with a lighter shade of the original color that has 50% white mixed in it. When someone hover over the text, the color will only have 30% white in it.</p>
 
     <p>The following examples illustrates how each prefix works for a heading.</p>
 
-    <pre><code class="lang-html">&lt;h1 class="tch tclh-green no-mar"&gt;Prepare for Trouble, Make it Double&lt;/h1&gt;
-&lt;h1 class="tch tch-red no-mar"&gt;My Adulting Skills: Questionable at Best&lt;/h1&gt;
+    <pre><code class="lang-html">&lt;h1 class="tch tclh-success no-mar"&gt;Prepare for Trouble, Make it Double&lt;/h1&gt;
+&lt;h1 class="tch tch-failure no-mar"&gt;My Adulting Skills: Questionable at Best&lt;/h1&gt;
 </code></pre>
 
     <div class="result n-round n-bshadow">
-        <h1 class="tch tclh-green no-mar">Prepare for Trouble, Make it Double</h1>
-        <h1 class="tch tch-red no-mar">My Adulting Skills: Questionable at Best</h1>
+        <h1 class="tch tclh-success no-mar">Prepare for Trouble, Make it Double</h1>
+        <h1 class="tch tch-failure no-mar">My Adulting Skills: Questionable at Best</h1>
     </div>
 
     <h3>Apply Background Color</h3>
@@ -546,20 +546,20 @@ function generateRandomPlaceholderUrl($text = '', $def_width = false)
 
     <p>You might also consider using the prefix <code>bgl-</code> (<b>B</b>ack<b>G</b>round <b>L</b>ight) with a color name to use a light shade of the color that has 50% white as background.</p>
 
-    <pre><code class="lang-html">&lt;h1 class="bgl-green no-mar s-lr-pad-x4 s-tb-mar-x2"&gt;Heading With Light Green Background.&lt;/h1&gt;
-&lt;h1 class="tc-white bg-green s-lr-pad-x4 no-mar"&gt;Heading With Azure Background.&lt;/h1&gt;
+    <pre><code class="lang-html">&lt;h1 class="bgl-success no-mar s-lr-pad-x4 s-tb-mar-x2"&gt;Heading With Light Green Background.&lt;/h1&gt;
+&lt;h1 class="tc-white bg-success s-lr-pad-x4 no-mar"&gt;Heading With Azure Background.&lt;/h1&gt;
 
-&lt;p&gt;A paragraph containing multiple span elements with &lt;span class="bgl-orange s-pad-x2"&gt;orange&lt;/span&gt;, &lt;span class="bg-azure s-pad-x2"&gt;azure&lt;/span&gt;, &lt;span class="bgl-red s-pad-x2"&gt;red&lt;/span&gt; background and black text.&lt;/p&gt;
-&lt;p&gt;A paragraph containing multiple span elements with &lt;span class="bg-orange tc-white s-pad-x2"&gt;orange&lt;/span&gt;, &lt;span class="bg-eggplant tc-white s-pad-x2"&gt;eggplant&lt;/span&gt;, &lt;span class="bg-ruby tc-white s-pad-x2"&gt;ruby&lt;/span&gt; background and white text.&lt;/p&gt;
+&lt;p&gt;A paragraph containing multiple span elements with &lt;span class="bgl-warning s-pad-x2"&gt;orange&lt;/span&gt;, &lt;span class="bg-neutral s-pad-x2"&gt;azure&lt;/span&gt;, &lt;span class="bgl-failure s-pad-x2"&gt;red&lt;/span&gt; background and black text.&lt;/p&gt;
+&lt;p&gt;A paragraph containing multiple span elements with &lt;span class="bg-warning tc-white s-pad-x2"&gt;orange&lt;/span&gt;, &lt;span class="bg-eggplant tc-white s-pad-x2"&gt;eggplant&lt;/span&gt;, &lt;span class="bg-ruby tc-white s-pad-x2"&gt;ruby&lt;/span&gt; background and white text.&lt;/p&gt;
 </code></pre>
 
     <div class="result n-round n-bshadow">
 
-        <h1 class="bgl-green no-mar s-lr-pad-x4 s-tb-mar-x2">Heading With Light Green Background.</h1>
-        <h1 class="tc-white bg-azure s-lr-pad-x4 no-mar">Heading With Azure Background.</h1>
+        <h1 class="bgl-success no-mar s-lr-pad-x4 s-tb-mar-x2">Heading With Light Green Background.</h1>
+        <h1 class="tc-white bg-neutral s-lr-pad-x4 no-mar">Heading With Azure Background.</h1>
 
-        <p>A paragraph containing multiple span elements with <span class="bgl-orange s-pad-x2">light orange</span>, <span class="bgl-azure s-pad-x2">azure</span>, <span class="bgl-red s-pad-x2">red</span> background and black text.</p>
-        <p>A paragraph containing multiple span elements with <span class="bg-orange tc-white s-pad-x2">orange</span>, <span class="bg-azure tc-white s-pad-x2">eggplant</span>, <span class="bg-red tc-white s-pad-x2">ruby</span> background and white text.</p>
+        <p>A paragraph containing multiple span elements with <span class="bgl-warning s-pad-x2">light orange</span>, <span class="bgl-neutral s-pad-x2">azure</span>, <span class="bgl-failure s-pad-x2">red</span> background and black text.</p>
+        <p>A paragraph containing multiple span elements with <span class="bg-warning tc-white s-pad-x2">orange</span>, <span class="bg-neutral tc-white s-pad-x2">eggplant</span>, <span class="bg-failure tc-white s-pad-x2">ruby</span> background and white text.</p>
 
     </div>
 
@@ -570,9 +570,9 @@ function generateRandomPlaceholderUrl($text = '', $def_width = false)
     <div class="result n-round n-bshadow">
         <h1 class="bgh bgh-brand-primary no-mar s-pad">Heading with Brand Primary Background.</h1>
 
-        <p>A paragraph containing multiple span elements with <span class="bglh-orange s-pad-x2">light orange</span>, <span class="bglh-azure s-pad-x2">light azure</span>, and <span class="bglh-red s-pad-x2">light red</span> background.</p>
+        <p>A paragraph containing multiple span elements with <span class="bglh-warning s-pad-x2">light orange</span>, <span class="bglh-neutral s-pad-x2">light azure</span>, and <span class="bglh-failure s-pad-x2">light red</span> background.</p>
 
-        <p>A paragraph containing multiple span elements with <span class="bgh-orange tc-white s-pad-x2">orange</span>, <span class="bgh-azure tc-white s-pad-x2">azure</span>, <span class="bgh-red tc-white s-pad-x2">red</span> background.</p>
+        <p>A paragraph containing multiple span elements with <span class="bgh-warning tc-white s-pad-x2">orange</span>, <span class="bgh-neutral tc-white s-pad-x2">azure</span>, <span class="bgh-failure tc-white s-pad-x2">red</span> background.</p>
     </div>
 
     <h2>Buttons</h2>
@@ -588,38 +588,38 @@ function generateRandomPlaceholderUrl($text = '', $def_width = false)
 
     <h3>Add Background Color to Buttons</h3>
 
-    <p>You can add classes like <code>bglh-azure</code>, <code>bglh-red-orange</code>, and <code>bglh-mint-green</code> to add a background color to the buttons. I have already explained how these classes work in the <a href="#colors">Colors section</a>.</p>
+    <p>You can add classes like <code>bglh-neutral</code>, <code>bglh-failure-warning</code>, and <code>bglh-mint-success</code> to add a background color to the buttons. I have already explained how these classes work in the <a href="#colors">Colors section</a>.</p>
 
     <p>If you want to create a disabled button simply add the class <code>disabled-btn</code>.</p>
 
-    <pre><code class="lang-html">&lt;button class="n-btn bglh-azure"&gt;Normal Button&lt;/button&gt;
-&lt;button class="n-btn bglh-red-orange"&gt;Red Button&lt;/button&gt;
-&lt;button class="n-btn bglh-mint-green"&gt;Orange Button&lt;/button&gt;
+    <pre><code class="lang-html">&lt;button class="n-btn bglh-neutral"&gt;Normal Button&lt;/button&gt;
+&lt;button class="n-btn bglh-failure-warning"&gt;Red Button&lt;/button&gt;
+&lt;button class="n-btn bglh-mint-success"&gt;Orange Button&lt;/button&gt;
 &lt;button class="n-btn disabled-btn"&gt;Disabled Button&lt;/button&gt;  
 </code></pre>
 
     <div class="result n-round n-bshadow">
-        <button class="n-btn bglh-azure">Azure Button</button>
-        <button class="n-btn bglh-red">Red Button</button>
-        <button class="n-btn bglh-orange">Orange Button</button>
-        <button class="n-btn bglh-green">Green Button</button>
+        <button class="n-btn bglh-neutral">Azure Button</button>
+        <button class="n-btn bglh-failure">Red Button</button>
+        <button class="n-btn bglh-warning">Orange Button</button>
+        <button class="n-btn bglh-success">Green Button</button>
         <button class="n-btn disabled-btn">Disabled Button</button>
     </div>
 
     <p>All buttons you create will have a black text color by default. However, black text is hard to read on dark backgrounds. You should consider adding the <code>tc-white</code> class to any buttons with a dark background to add enough contrast.</p>
 
-    <pre><code class="lang-html">&lt;button class="n-btn tc-white bgh-azure"&gt;Azure Button&lt;/button&gt;
-&lt;button class="n-btn tc-white bgh-red"&gt;Red Button&lt;/button&gt;
-&lt;button class="n-btn tc-white bgh-orange"&gt;Orange Button&lt;/button&gt;
-&lt;button class="n-btn tc-white bgh-green"&gt;Green Button&lt;/button&gt;
+    <pre><code class="lang-html">&lt;button class="n-btn tc-white bgh-neutral"&gt;Azure Button&lt;/button&gt;
+&lt;button class="n-btn tc-white bgh-failure"&gt;Red Button&lt;/button&gt;
+&lt;button class="n-btn tc-white bgh-warning"&gt;Orange Button&lt;/button&gt;
+&lt;button class="n-btn tc-white bgh-success"&gt;Green Button&lt;/button&gt;
 &lt;button class="n-btn disabled-btn tc-white"&gt;Disabled Button&lt;/button&gt;  
 </code></pre>
 
     <div class="result n-round n-bshadow">
-        <button class="n-btn tc-white bgh-azure">Azure Button</button>
-        <button class="n-btn tc-white bgh-red">Red Button</button>
-        <button class="n-btn tc-white bgh-orange">Red Button</button>
-        <button class="n-btn tc-white bgh-green">Green Button</button>
+        <button class="n-btn tc-white bgh-neutral">Azure Button</button>
+        <button class="n-btn tc-white bgh-failure">Red Button</button>
+        <button class="n-btn tc-white bgh-warning">Red Button</button>
+        <button class="n-btn tc-white bgh-success">Green Button</button>
         <button class="n-btn disabled-btn tc-white">Disabled Button</button>
     </div>
 
@@ -629,17 +629,17 @@ function generateRandomPlaceholderUrl($text = '', $def_width = false)
 
 
     <pre><code class="lang-html">&lt;button class="n-btn tc-white n-round disabled-btn bgh-gray"&gt;Disabled Button&lt;/button&gt;
-&lt;button class="n-btn tc-white n-round-x2 bgh-azure"&gt;Normal Button&lt;/button&gt;
-&lt;button class="n-btn tc-white n-round-x3 bgh-red"&gt;Danger Button&lt;/button&gt;
-&lt;button class="n-btn tc-white n-round-x3 bgh-orange"&gt;Danger Button&lt;/button&gt;
-&lt;button class="n-btn tc-white n-round-x4 bgh-green"&gt;Success Button&lt;/button&gt;
+&lt;button class="n-btn tc-white n-round-x2 bgh-neutral"&gt;Normal Button&lt;/button&gt;
+&lt;button class="n-btn tc-white n-round-x3 bgh-failure"&gt;Danger Button&lt;/button&gt;
+&lt;button class="n-btn tc-white n-round-x3 bgh-warning"&gt;Danger Button&lt;/button&gt;
+&lt;button class="n-btn tc-white n-round-x4 bgh-success"&gt;Success Button&lt;/button&gt;
 </code></pre>
 
     <div class="result n-round n-bshadow">
-        <button class="n-btn tc-white n-round bgh-azure">Azure Button</button>
-        <button class="n-btn tc-white n-round-x2 bgh-red">Red Button</button>
-        <button class="n-btn tc-white n-round-x3 bgh-orange">Orange Button</button>
-        <button class="n-btn tc-white n-round-x4 bgh-green">Green Button</button>
+        <button class="n-btn tc-white n-round bgh-neutral">Azure Button</button>
+        <button class="n-btn tc-white n-round-x2 bgh-failure">Red Button</button>
+        <button class="n-btn tc-white n-round-x3 bgh-warning">Orange Button</button>
+        <button class="n-btn tc-white n-round-x4 bgh-success">Green Button</button>
         <button class="n-btn tc-white n-round-x5 disabled-btn">Disabled Button</button>
     </div>
 
@@ -649,19 +649,19 @@ function generateRandomPlaceholderUrl($text = '', $def_width = false)
 
     <p>You can set the text color by using <code>tch-</code> classes I mentioned in the <a href="#colors">Colors section</a>.</p>
 
-    <pre><code class="lang-html">&lt;button class="n-btn n-outline tch-azure"&gt;Normal Button&lt;/button&gt;
+    <pre><code class="lang-html">&lt;button class="n-btn n-outline tch-neutral"&gt;Normal Button&lt;/button&gt;
 &lt;button class="n-btn n-outline disabled-btn tcl-text"&gt;Disabled Button&lt;/button&gt;
-&lt;button class="n-btn n-outline-x2 tch-red"&gt;Red Button&lt;/button&gt;
-&lt;button class="n-btn n-outline-x3 tch-orange"&gt;Orange Button&lt;/button&gt;
-&lt;button class="n-btn n-outline-x4 tch-green"&gt;Green Button&lt;/button&gt;
+&lt;button class="n-btn n-outline-x2 tch-failure"&gt;Red Button&lt;/button&gt;
+&lt;button class="n-btn n-outline-x3 tch-warning"&gt;Orange Button&lt;/button&gt;
+&lt;button class="n-btn n-outline-x4 tch-success"&gt;Green Button&lt;/button&gt;
 </code></pre>
 
     <div class="result rounded n-bshadow">
-        <button class="n-btn n-outline tch-azure">Normal Button</button>
+        <button class="n-btn n-outline tch-neutral">Normal Button</button>
         <button class="n-btn n-outline disabled-btn tcl-text">Disabled Button</button>
-        <button class="n-btn n-outline-x2 tch-red">Red Button</button>
-        <button class="n-btn n-outline-x3 tch-orange">Orange Button</button>
-        <button class="n-btn n-outline-x4 tch-green">Green Button</button>
+        <button class="n-btn n-outline-x2 tch-failure">Red Button</button>
+        <button class="n-btn n-outline-x3 tch-warning">Orange Button</button>
+        <button class="n-btn n-outline-x4 tch-success">Green Button</button>
     </div>
 
     <h3>Create Buttons with Borders</h3>
@@ -669,10 +669,10 @@ function generateRandomPlaceholderUrl($text = '', $def_width = false)
     <p>If you want to create buttons that have a background as well as borders, you should use the <code>n-border</code> helper classes.</p>
 
     <div class="result rounded n-bshadow">
-        <button class="n-btn tc-white bgh-azure n-border">Normal Button</button>
-        <button class="n-btn tc-white bgh-orange n-border-x2">Orange Button</button>
-        <button class="n-btn tc-white bgh-green n-border-x3">Green Button</button>
-        <button class="n-btn tc-white bgh-red n-border-x4">Red Button</button>
+        <button class="n-btn tc-white bgh-neutral n-border">Normal Button</button>
+        <button class="n-btn tc-white bgh-warning n-border-x2">Orange Button</button>
+        <button class="n-btn tc-white bgh-success n-border-x3">Green Button</button>
+        <button class="n-btn tc-white bgh-failure n-border-x4">Red Button</button>
     </div>
 
     <h3>Using Button Classes on Links and Input Elements</h3>
@@ -682,9 +682,9 @@ function generateRandomPlaceholderUrl($text = '', $def_width = false)
     <p>Use a combination of <code>n-border</code>, <code>n-outline</code>, and helper color classes to get desired results.</p>
 
     <div class="result rounded n-bshadow">
-        <a href="https://hellonitish.com" class="n-btn n-border-x2 bglh-red tc-white">Link Button</a>
-        <input type="button" value="Input Button" class="n-btn n-border-x2 bglh-azure">
-        <input type="submit" value="Submit Button" class="n-btn n-outline-x2 tch-green">
+        <a href="https://hellonitish.com" class="n-btn n-border-x2 bglh-failure tc-white">Link Button</a>
+        <input type="button" value="Input Button" class="n-btn n-border-x2 bglh-neutral">
+        <input type="submit" value="Submit Button" class="n-btn n-outline-x2 tch-success">
         <input type="reset" value="Reset Button (Disabled)" class="n-btn n-border-x2 disabled-btn">
     </div>
 
@@ -914,7 +914,7 @@ function generateRandomPlaceholderUrl($text = '', $def_width = false)
                     <h3>Want to know what else I have created?</h3>
                     <p>Simply visit my website.</p>
 
-                    <a class="n-btn bglh-green" href="https://hellonitish.com">Visit Hello Nitish</a>
+                    <a class="n-btn bglh-success" href="https://hellonitish.com">Visit Hello Nitish</a>
                 </div>
             </div>
         </div>
@@ -1326,7 +1326,7 @@ function generateRandomPlaceholderUrl($text = '', $def_width = false)
 
     <p>Wrap all the navigation links in a <code>div</code> element with the <code>n-navlink-group</code> class.</p>
 
-    <pre><code class="lang-html">&lt;nav class="n-navigation tc-azure"&gt;
+    <pre><code class="lang-html">&lt;nav class="n-navigation tc-neutral"&gt;
     &lt;a href="https://hellonitish.com" class="nav-brand"&gt;brand&lt;/a&gt;
     &lt;i class="fa-solid fa-bars menu-opener" data-close="fa-bars" data-open="fa-xmark"&gt;&lt;/i&gt;
     &lt;div class="n-navlink-group"&gt;
@@ -1339,7 +1339,7 @@ function generateRandomPlaceholderUrl($text = '', $def_width = false)
 &lt;/nav&gt;</code></pre>
 
     <div class="result n-bshadow n-round">
-        <nav class="n-navigation tc-azure no-pad">
+        <nav class="n-navigation tc-neutral no-pad">
             <a href="https://hellonitish.com" class="nav-brand">brand</a>
             <i class="fa-solid fa-bars menu-opener" data-close="fa-bars" data-open="fa-xmark"></i>
             <div class="n-navlink-group">
@@ -1383,7 +1383,7 @@ function generateRandomPlaceholderUrl($text = '', $def_width = false)
 
     <p>You will also have to make changes to the navigation structure to accommodate the movement of links.</p>
 
-    <pre><code class="lang-html">&lt;nav id="shrinker-menu" class="n-navigation shrinker tc-mint-green"&gt;
+    <pre><code class="lang-html">&lt;nav id="shrinker-menu" class="n-navigation shrinker tc-mint-success"&gt;
     &lt;a href="https://hellonitish.com" class="nav-brand"&gt;brand&lt;/a&gt;
     &lt;ol&gt;
         &lt;li&gt;&lt;a href=""&gt;Products&lt;/a&gt;&lt;/li&gt;
@@ -1401,7 +1401,7 @@ function generateRandomPlaceholderUrl($text = '', $def_width = false)
 &lt;/nav&gt;</code></pre>
 
     <div class="result n-round n-bshadow">
-        <nav id="shrinker-menu" class="n-navigation shrinker tc-mint-green no-pad">
+        <nav id="shrinker-menu" class="n-navigation shrinker tc-mint-success no-pad">
             <a href="https://hellonitish.com" class="nav-brand">brand</a>
             <ol>
                 <li><a href="">Products</a></li>
@@ -1492,23 +1492,23 @@ function generateRandomPlaceholderUrl($text = '', $def_width = false)
 
     <p>This means that you can use the <code>tc-*</code> color classes to set the alert's text color and its background would automatically have a lighter shade of the same color.</p>
 
-    <pre><code class="lang-html">&lt;div class="n-alert tc-azure"&gt;&lt;p&gt;Hey, this is an informational alert with azure text.&lt;/p&gt;&lt;/div&gt;
-&lt;div class="n-alert tc-orange"&gt;&lt;p&gt;Hey, this is a warning alert with orange text.&lt;/p&gt;&lt;/div&gt;
-&lt;div class="n-alert tc-green"&gt;&lt;p&gt;Hey, this is a success alert with green text.&lt;/p&gt;&lt;/div&gt;
-&lt;div class="n-alert tc-red"&gt;&lt;p&gt;Hey, this is danger alert with red text.&lt;/p&gt;&lt;/div&gt;
+    <pre><code class="lang-html">&lt;div class="n-alert tc-neutral"&gt;&lt;p&gt;Hey, this is an informational alert with azure text.&lt;/p&gt;&lt;/div&gt;
+&lt;div class="n-alert tc-warning"&gt;&lt;p&gt;Hey, this is a warning alert with orange text.&lt;/p&gt;&lt;/div&gt;
+&lt;div class="n-alert tc-success"&gt;&lt;p&gt;Hey, this is a success alert with green text.&lt;/p&gt;&lt;/div&gt;
+&lt;div class="n-alert tc-failure"&gt;&lt;p&gt;Hey, this is danger alert with red text.&lt;/p&gt;&lt;/div&gt;
 </code></pre>
 
     <div class="result n-bshadow n-round">
-        <div class="n-alert tc-azure">
+        <div class="n-alert tc-neutral">
             <p>Hey, this is an informational alert with azure text.</p>
         </div>
-        <div class="n-alert tc-orange">
+        <div class="n-alert tc-warning">
             <p>Hey, this is a warning alert with orange text.</p>
         </div>
-        <div class="n-alert tc-green">
+        <div class="n-alert tc-success">
             <p>Hey, this is a success alert with mint green text.</p>
         </div>
-        <div class="n-alert tc-red">
+        <div class="n-alert tc-failure">
             <p>Hey, this is danger alert with red text.</p>
         </div>
     </div>
@@ -1531,27 +1531,27 @@ function generateRandomPlaceholderUrl($text = '', $def_width = false)
 
     <p>You can also combine the classes to get try different looks for alerts.</p>
 
-    <pre><code class="lang-html">&lt;div class="n-alert n-border tc-red"&gt;&lt;p&gt;Hey, this is red alert with border.&lt;/p&gt;&lt;/div&gt;
-&lt;div class="n-alert n-border-x2 tc-orange"&gt;&lt;p&gt;Hey, this is brown colored alert with a more prominent border.&lt;/p&gt;&lt;/div&gt;
+    <pre><code class="lang-html">&lt;div class="n-alert n-border tc-failure"&gt;&lt;p&gt;Hey, this is red alert with border.&lt;/p&gt;&lt;/div&gt;
+&lt;div class="n-alert n-border-x2 tc-warning"&gt;&lt;p&gt;Hey, this is brown colored alert with a more prominent border.&lt;/p&gt;&lt;/div&gt;
 &lt;div class="n-alert n-outline-x2 tc-dark-cyan"&gt;&lt;p&gt;Hey, alert only has an outline.&lt;/p&gt;&lt;/div&gt;
 &lt;div class="n-alert n-round-x3 tc-eggplant"&gt;&lt;p&gt;Hey, this alert is a little round around the corners.&lt;/p&gt;&lt;/div&gt;
-&lt;div class="n-alert n-bshadow n-round-x4 tc-mint-green"&gt;&lt;p&gt;Hey, this alert has a subtle box-shadow.&lt;/p&gt;&lt;/div&gt;
+&lt;div class="n-alert n-bshadow n-round-x4 tc-mint-success"&gt;&lt;p&gt;Hey, this alert has a subtle box-shadow.&lt;/p&gt;&lt;/div&gt;
 </code></pre>
 
     <div class="result n-bshadow n-rounded">
-        <div class="n-alert n-border tc-red">
+        <div class="n-alert n-border tc-failure">
             <p>Hey, this is red alert with border.</p>
         </div>
-        <div class="n-alert n-border-x2 tc-orange">
+        <div class="n-alert n-border-x2 tc-warning">
             <p>Hey, this is orange colored alert with a more prominent border.</p>
         </div>
-        <div class="n-alert n-outline-x2 tc-azure">
+        <div class="n-alert n-outline-x2 tc-neutral">
             <p>Hey, this alert only has an outline.</p>
         </div>
-        <div class="n-alert n-round-x3 tc-green">
+        <div class="n-alert n-round-x3 tc-success">
             <p>Hey, this alert is a little round around the corners.</p>
         </div>
-        <div class="n-alert n-bshadow n-round-x4 tc-red">
+        <div class="n-alert n-bshadow n-round-x4 tc-failure">
             <p>Hey, this alert has a subtle box-shadow.</p>
         </div>
     </div>
@@ -1560,33 +1560,33 @@ function generateRandomPlaceholderUrl($text = '', $def_width = false)
 
     <p>Let's say you want to create an alert that has a heading, a link, and a couple of paragraphs.</p>
 
-    <pre><code class="lang-html">&lt;div class="n-alert tcl-azure s-pad-x8"&gt;
+    <pre><code class="lang-html">&lt;div class="n-alert tcl-neutral s-pad-x8"&gt;
         &lt;h3&gt;Alert Heading!&lt;/h3&gt;
         &lt;hr&gt;
         &lt;p&gt;Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.&lt;/p&gt;
         &lt;p&gt;Hey, this alert is a &lt;a href="#" class="c-inherit"&gt;little round&lt;/a&gt; around the corners.&lt;/p&gt;
-        &lt;button class="n-btn tc-white bg-mint-green"&gt;Accept&lt;/button&gt;
+        &lt;button class="n-btn tc-white bg-mint-success"&gt;Accept&lt;/button&gt;
         &lt;button class="n-btn tc-white bgl-ruby"&gt;Reject&lt;/button&gt;
     &lt;/div&gt;</code></pre>
 
     <div class="result n-bshadow n-round">
-        <div class="n-alert tcl-azure s-pad-x8">
+        <div class="n-alert tcl-neutral s-pad-x8">
             <h3>Alert Heading!</h3>
             <hr>
             <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
             <p>Hey, this alert is a <a href="#" class="c-inherit">little round</a> around the corners.</p>
-            <button class="n-btn tc-white bgh-green">Accept</button>
-            <button class="n-btn tc-white bgh-red">Reject</button>
+            <button class="n-btn tc-white bgh-success">Accept</button>
+            <button class="n-btn tc-white bgh-failure">Reject</button>
         </div>
     </div>
 
     <h3>Display and Hide Alerts</h3>
 
-    <button class="n-btn tc-mint-green n-opener n-outline-x2 n-outline-hover" data-nu-target="myAlert">Show Alert</button>
+    <button class="n-btn tc-mint-success n-opener n-outline-x2 n-outline-hover" data-nu-target="myAlert">Show Alert</button>
 
     <button class="n-btn tc-ruby n-closer n-outline-x2 n-outline-hover" data-nu-target="myAlert">Hide Alert</button>
 
-    <div id="myAlert" class="n-alert n-outline-x2 tc-orange fade n-outline-hover">
+    <div id="myAlert" class="n-alert n-outline-x2 tc-warning fade n-outline-hover">
         <p class="n-sflex">You can close me if you like! <i class="fa-solid fa-xmark close-alert n-closer" data-nu-target="myAlert"></i></p>
     </div>
 
@@ -1637,7 +1637,7 @@ function generateRandomPlaceholderUrl($text = '', $def_width = false)
 
     <pre><code class="lang-html">
 &lt;nav&gt;
-    &lt;ul class="pagination tch-orange"&gt;
+    &lt;ul class="pagination tch-warning"&gt;
         &lt;li&gt;&lt;a href=""&gt;Previous&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;&lt;a href=""&gt;1&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;&lt;a href=""&gt;2&lt;/a&gt;&lt;/li&gt;
@@ -1650,7 +1650,7 @@ function generateRandomPlaceholderUrl($text = '', $def_width = false)
 
     <div class="result n-bshadow n-round">
         <nav>
-            <ul class="pagination tch-orange">
+            <ul class="pagination tch-warning">
                 <li><a href="">Previous</a></li>
                 <li><a href="">1</a></li>
                 <li><a href="">2</a></li>
@@ -1665,7 +1665,7 @@ function generateRandomPlaceholderUrl($text = '', $def_width = false)
 
     <pre><code class="lang-html">
 &lt;nav&gt;
-    &lt;ul class="pagination tclh-orange"&gt;
+    &lt;ul class="pagination tclh-warning"&gt;
         &lt;li&gt;&lt;a href=""&gt;Previous&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;&lt;a href=""&gt;1&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;&lt;a href=""&gt;2&lt;/a&gt;&lt;/li&gt;
@@ -1678,7 +1678,7 @@ function generateRandomPlaceholderUrl($text = '', $def_width = false)
 
     <div class="result n-bshadow n-round">
         <nav>
-            <ul class="pagination tclh-orange">
+            <ul class="pagination tclh-warning">
                 <li><a href="">Previous</a></li>
                 <li><a href="">1</a></li>
                 <li><a href="">2</a></li>
@@ -1695,11 +1695,11 @@ function generateRandomPlaceholderUrl($text = '', $def_width = false)
         <li>
             <p>Use <code>pag-bordered</code> to add a border around each page link.</p>
 
-            <pre><code class="lang-html">&lt;ul class="pagination pag-bordered tclh-green"&gt;</code></pre>
+            <pre><code class="lang-html">&lt;ul class="pagination pag-bordered tclh-success"&gt;</code></pre>
 
             <div class="result n-bshadow n-round">
                 <nav>
-                    <ul class="pagination pag-bordered tclh-green">
+                    <ul class="pagination pag-bordered tclh-success">
                         <li><a href="">Previous</a></li>
                         <li><a href="">1</a></li>
                         <li><a href="">2</a></li>
@@ -1713,11 +1713,11 @@ function generateRandomPlaceholderUrl($text = '', $def_width = false)
         <li>
             <p>Use <code>pag-disjoint</code> to add some space between each link.</p>
 
-            <pre><code class="lang-html">&lt;ul class="pagination pag-disjoint tch-red"&gt;</code></pre>
+            <pre><code class="lang-html">&lt;ul class="pagination pag-disjoint tch-failure"&gt;</code></pre>
 
             <div class="result n-bshadow n-round">
                 <nav>
-                    <ul class="pagination pag-disjoint tch-red">
+                    <ul class="pagination pag-disjoint tch-failure">
                         <li><a href="">Previous</a></li>
                         <li><a href="">1</a></li>
                         <li><a href="">2</a></li>
@@ -1740,7 +1740,7 @@ function generateRandomPlaceholderUrl($text = '', $def_width = false)
 
     <div class="result n-bshadow n-round">
         <nav>
-            <ul class="pagination pag-disjoint nc-round-x3 tch-azure">
+            <ul class="pagination pag-disjoint nc-round-x3 tch-neutral">
                 <li><a href="">Previous</a></li>
                 <li><a href="">1</a></li>
                 <li><a href="">2</a></li>
@@ -1755,11 +1755,11 @@ function generateRandomPlaceholderUrl($text = '', $def_width = false)
 
     <p>You can use a combination of <code>pag-disjoint</code>, <code>pag-bordered</code>, <code>tch-</code>, <code>tclh-</code>, and <code>nc-rounded-*</code> classes to get the results you need.</p>
 
-    <pre><code class="lang-html">&lt;ul class="pagination pag-disjoint pag-bordered tch-red"&gt;</code></pre>
+    <pre><code class="lang-html">&lt;ul class="pagination pag-disjoint pag-bordered tch-failure"&gt;</code></pre>
 
     <div class="result n-bshadow n-round">
         <nav>
-            <ul class="pagination pag-disjoint pag-bordered tch-red">
+            <ul class="pagination pag-disjoint pag-bordered tch-failure">
                 <li><a href="">Previous</a></li>
                 <li><a href="">1</a></li>
                 <li><a href="">2</a></li>
@@ -1770,11 +1770,11 @@ function generateRandomPlaceholderUrl($text = '', $def_width = false)
         </nav>
     </div>
 
-    <pre><code class="lang-html">&lt;ul class="pagination pag-disjoint pag-bordered nc-round-x3 tclh-green"&gt;</code></pre>
+    <pre><code class="lang-html">&lt;ul class="pagination pag-disjoint pag-bordered nc-round-x3 tclh-success"&gt;</code></pre>
 
     <div class="result n-bshadow n-round">
         <nav>
-            <ul class="pagination pag-disjoint pag-bordered nc-round-x3 tclh-green">
+            <ul class="pagination pag-disjoint pag-bordered nc-round-x3 tclh-success">
                 <li><a href="">Previous</a></li>
                 <li><a href="">1</a></li>
                 <li><a href="">2</a></li>
@@ -1791,7 +1791,7 @@ function generateRandomPlaceholderUrl($text = '', $def_width = false)
     <h3>Disabled and Active Pagination Links</h3>
 
     <nav>
-        <ul class="pagination tclh-azure">
+        <ul class="pagination tclh-neutral">
             <li class="disabled"><a href="">Previous</a></li>
             <li class="active"><a href="">1</a></li>
             <li><a href="">2</a></li>
@@ -1802,7 +1802,7 @@ function generateRandomPlaceholderUrl($text = '', $def_width = false)
     </nav>
 
     <nav>
-        <ul class="pagination pag-disjoint pag-bordered tch-orange">
+        <ul class="pagination pag-disjoint pag-bordered tch-warning">
             <li><a href="">Previous</a></li>
             <li class="disabled"><a href="">11</a></li>
             <li><a href="">12</a></li>
@@ -1883,19 +1883,19 @@ function generateRandomPlaceholderUrl($text = '', $def_width = false)
 
     <p>You can also set a background color for the content panes using the <code>bgle-</code> helper classes that provide a very shade of different colors.</p>
 
-    <pre><code class="lang-html">&lt;ul class="n-pills n-flex" data-nu-tab-classes="bg-azure tc-white"&gt;
-    &lt;li class="active"&gt;&lt;button class="n-btn bg-azure tc-white" data-nu-target="family-b"&gt;Family&lt;/button&gt;&lt;/li&gt;
+    <pre><code class="lang-html">&lt;ul class="n-pills n-flex" data-nu-tab-classes="bg-neutral tc-white"&gt;
+    &lt;li class="active"&gt;&lt;button class="n-btn bg-neutral tc-white" data-nu-target="family-b"&gt;Family&lt;/button&gt;&lt;/li&gt;
     &lt;li&gt;&lt;button class="n-btn" data-nu-target="friends-b"&gt;Friends&lt;/button&gt;&lt;/li&gt;
     &lt;li&gt;&lt;button class="n-btn" data-nu-target="neighbors-b"&gt;Neighbors&lt;/button&gt;&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
 
     <div class="result n-round n-bshadow">
-        <ul class="n-pills n-flex" data-nu-tab-classes="bg-azure tc-white">
-            <li class="active"><button class="n-btn bg-azure tc-white" data-nu-target="family-b">Family</button></li>
+        <ul class="n-pills n-flex" data-nu-tab-classes="bg-neutral tc-white">
+            <li class="active"><button class="n-btn bg-neutral tc-white" data-nu-target="family-b">Family</button></li>
             <li><button class="n-btn" data-nu-target="friends-b">Friends</button></li>
             <li><button class="n-btn" data-nu-target="neighbors-b">Neighbors</button></li>
         </ul>
-        <div class="tab-content bgle-azure s-pad-x4 s-tb-mar-x2" id="n-tab-content">
+        <div class="tab-content bgle-neutral s-pad-x4 s-tb-mar-x2" id="n-tab-content">
             <div class="tab-pane fade show active" id="family-b" role="tabpanel" aria-labelledby="family-tab">This is something related to family.</div>
             <div class="tab-pane fade hide" id="friends-b" role="tabpanel" aria-labelledby="friends-tab">This is something related to friends.</div>
             <div class="tab-pane fade hide" id="neighbors-b" role="tabpanel" aria-labelledby="neighbors-tab">I also have bad neighbors.</div>
@@ -1908,8 +1908,8 @@ function generateRandomPlaceholderUrl($text = '', $def_width = false)
 
     <p>Creating vertical pilled tabs is just a matter of using the <code>n-pills</code> and <code>vertical-pills</code> classes together.</p>
 
-    <pre><code class="lang-html">&lt;ul class="n-pills vertical-pills n-flex n-mw-15" data-nu-tab-classes="bg-orange tc-white"&gt;
-    &lt;li class="active"&gt;&lt;button class="n-btn bg-orange tc-white" data-nu-target="family-c"&gt;Family&lt;/button&gt;&lt;/li&gt;
+    <pre><code class="lang-html">&lt;ul class="n-pills vertical-pills n-flex n-mw-15" data-nu-tab-classes="bg-warning tc-white"&gt;
+    &lt;li class="active"&gt;&lt;button class="n-btn bg-warning tc-white" data-nu-target="family-c"&gt;Family&lt;/button&gt;&lt;/li&gt;
     &lt;li&gt;&lt;button class="n-btn" data-nu-target="friends-c"&gt;Friends&lt;/button&gt;&lt;/li&gt;
     &lt;li&gt;&lt;button class="n-btn" data-nu-target="neighbors-c"&gt;Neighbors&lt;/button&gt;&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
@@ -1917,12 +1917,12 @@ function generateRandomPlaceholderUrl($text = '', $def_width = false)
 
     <div class="result n-round n-bshadow">
         <div class="n-flex">
-            <ul class="n-pills vertical-pills n-flex n-mw-15" data-nu-tab-classes="bg-orange tc-white">
-                <li class="active"><button class="n-btn bg-orange tc-white" data-nu-target="family-c">Family</button></li>
+            <ul class="n-pills vertical-pills n-flex n-mw-15" data-nu-tab-classes="bg-warning tc-white">
+                <li class="active"><button class="n-btn bg-warning tc-white" data-nu-target="family-c">Family</button></li>
                 <li><button class="n-btn" data-nu-target="friends-c">Friends</button></li>
                 <li><button class="n-btn" data-nu-target="neighbors-c">Neighbors</button></li>
             </ul>
-            <div class="tab-content bgle-orange s-pad-x4 n-mw-85" id="n-tab-content">
+            <div class="tab-content bgle-warning s-pad-x4 n-mw-85" id="n-tab-content">
                 <div class="tab-pane fade show active" id="family-c" role="tabpanel" aria-labelledby="family-tab">This is something related to family.</div>
                 <div class="tab-pane fade hide" id="friends-c" role="tabpanel" aria-labelledby="friends-tab">This is something related to friends.</div>
                 <div class="tab-pane fade hide" id="neighbors-c" role="tabpanel" aria-labelledby="neighbors-tab">I also have bad neighbors.</div>
@@ -1937,16 +1937,16 @@ function generateRandomPlaceholderUrl($text = '', $def_width = false)
     <p>Make sure you add the classes to the <code>na-tab-classes</code> data attribute as that's where NeatU looks for the classes to add to the active tab.</p>
 
     <div class="result n-round n-bshadow">
-        <ul class="n-pills n-flex" data-nu-tab-classes="bgl-green n-border-x2">
-            <li class="active"><button class="n-btn bgl-green n-border-x2" data-nu-target="family-b">Family</button></li>
+        <ul class="n-pills n-flex" data-nu-tab-classes="bgl-success n-border-x2">
+            <li class="active"><button class="n-btn bgl-success n-border-x2" data-nu-target="family-b">Family</button></li>
             <li><button class="n-btn" data-nu-target="friends-b">Friends</button></li>
             <li><button class="n-btn" data-nu-target="neighbors-b">Neighbors</button></li>
         </ul>
     </div>
 
     <div class="result n-round n-bshadow">
-        <ul class="n-pills n-flex" data-nu-tab-classes="bglh-red tc-white n-round-x2">
-            <li class="active"><button class="n-btn bglh-red tc-white n-round-x2" data-nu-target="family-b">Family</button></li>
+        <ul class="n-pills n-flex" data-nu-tab-classes="bglh-failure tc-white n-round-x2">
+            <li class="active"><button class="n-btn bglh-failure tc-white n-round-x2" data-nu-target="family-b">Family</button></li>
             <li><button class="n-btn" data-nu-target="friends-b">Friends</button></li>
             <li><button class="n-btn" data-nu-target="neighbors-b">Neighbors</button></li>
         </ul>
@@ -2026,19 +2026,19 @@ function generateRandomPlaceholderUrl($text = '', $def_width = false)
     <div class="result n-round n-bshadow">
         <div class="n-flex n-gap-x4">
 
-            <div class="hrz-group tc-green bgle-green wd-fit">
+            <div class="hrz-group tc-success bgle-success wd-fit">
                 <button class="n-btn"><i class="fa-regular fa-floppy-disk"></i></button><button class="n-btn"><i class="fa-solid fa-rotate-left"></i></button><button class="n-btn"><i class="fa-solid fa-rotate-right"></i></button>
             </div>
 
-            <div class="hrz-group tc-azure bgle-azure wd-fit">
+            <div class="hrz-group tc-neutral bgle-neutral wd-fit">
                 <button class="n-btn"><i class="fa-solid fa-heading"></i></button><button class="n-btn"><i class="fa-solid fa-paragraph"></i></button><button class="n-btn"><i class="fa-solid fa-link"></i></button>
             </div>
 
-            <div class="hrz-group tc-azure bgle-azure wd-fit">
+            <div class="hrz-group tc-neutral bgle-neutral wd-fit">
                 <button class="n-btn"><i class="fa-solid fa-italic"></i></button><button class="n-btn"><i class="fa-solid fa-bold"></i></button><button class="n-btn"><i class="fa-solid fa-underline"></i></button>
             </div>
 
-            <div class="hrz-group tc-green bgle-green wd-fit">
+            <div class="hrz-group tc-success bgle-success wd-fit">
                 <button class="n-btn"><i class="fa-solid fa-spell-check"></i></button>
             </div>
         </div>
@@ -2068,35 +2068,35 @@ function generateRandomPlaceholderUrl($text = '', $def_width = false)
                     <h3>Make Breakfast</h3>
                     <p>Eat something healthy.</p>
                 </div>
-                <span class="wd-fit bgl-red s-pad-x2 n-border-x2">7:00 AM</span>
+                <span class="wd-fit bgl-failure s-pad-x2 n-border-x2">7:00 AM</span>
             </li>
             <li>
                 <div class="wd-fit detail">
                     <h3>Study History</h3>
                     <p>Finish the chapter.</p>
                 </div>
-                <span class="wd-fit bgl-red s-pad-x2 n-border-x2">9:00 AM</span>
+                <span class="wd-fit bgl-failure s-pad-x2 n-border-x2">9:00 AM</span>
             </li>
             <li>
                 <div class="wd-fit detail">
                     <h3>Meet Jack</h3>
                     <p>Get notes from him.</p>
                 </div>
-                <span class="wd-fit bgl-orange s-pad-x2 n-border-x2">11:00 AM</span>
+                <span class="wd-fit bgl-warning s-pad-x2 n-border-x2">11:00 AM</span>
             </li>
             <li>
                 <div class="wd-fit detail">
                     <h3>Go to Market</h3>
                     <p>Buy some vegetables.</p>
                 </div>
-                <span class="wd-fit bgl-orange s-pad-x2 n-border-x2">04:00 AM</span>
+                <span class="wd-fit bgl-warning s-pad-x2 n-border-x2">04:00 AM</span>
             </li>
             <li>
                 <div class="wd-fit detail">
                     <h3>Make Dinner</h3>
                     <p>Cook the vegetables.</p>
                 </div>
-                <span class="wd-fit bgl-green s-pad-x2 n-border-x2">8:00 PM</span>
+                <span class="wd-fit bgl-success s-pad-x2 n-border-x2">8:00 PM</span>
             </li>
         </ol>
     </div>
@@ -2104,8 +2104,8 @@ function generateRandomPlaceholderUrl($text = '', $def_width = false)
 
     <script type="module" src="https://cdn.jsdelivr.net/gh/9itish/colorful@main/src/colorful.js"></script>
     <script src="js/neatu.js"></script>
+    <script src="js/script.js"></script>
     <script type="module">
-
         import { Colorful } from 'https://cdn.jsdelivr.net/gh/9itish/colorful@main/src/colorful.js';
 
         let allGridExamples = document.querySelectorAll("div.n-flex.grid-example");

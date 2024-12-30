@@ -1,55 +1,55 @@
 :root {
-  --n-green-color: #4CAF50;
-  --n-red-color: #E53935;
-  --n-orange-color: #F57C00;
-  --n-azure-color: #2196F3;
+  --n-success-color: #4CAF50;
+  --n-failure-color: #E53935;
+  --n-warning-color: #F57C00;
+  --n-neutral-color: #2196F3;
   --n-text-color: #222222;
   --n-border-color: #AAAAAA;
   --n-brand-primary-color: #00796B;
-  --n-brand-secondary-color: #0c3671;
+  --n-brand-secondary-color: #0C3671;
 }
 
 :root {
   --n-base-unit: 1rem;
-  --n-base-font-size: 1rem;
+  --n-base-font-size: 16px;
   --n-base-padding: 0.15rem;
   --n-base-margin: 0.15rem;
   --n-border-width: 1px;
   --n-border-radius: 0.2em;
-  --n-green-color: #4CAF50;
-  --n-red-color: #E53935;
-  --n-orange-color: #F57C00;
-  --n-azure-color: #2196F3;
+  --n-success-color: #4CAF50;
+  --n-failure-color: #E53935;
+  --n-warning-color: #F57C00;
+  --n-neutral-color: #2196F3;
   --n-text-color: #222222;
   --n-border-color: #AAAAAA;
   --n-brand-primary-color: #00796B;
-  --n-brand-secondary-color: #0c3671;
+  --n-brand-secondary-color: #0C3671;
 }
 
 @media (min-width: 768px) {
   :root {
     --n-base-padding: 0.18rem;
     --n-base-margin: 0.18rem;
-    --n-base-font-size: 1rem;
   }
 }
 @media (min-width: 992px) {
   :root {
     --n-base-padding: 0.2rem;
     --n-base-margin: 0.2rem;
+    --n-base-font-size: 17px;
   }
 }
 @media (min-width: 1200px) {
   :root {
     --n-base-padding: 0.24rem;
     --n-base-margin: 0.24rem;
-    --n-base-font-size: 1.1rem;
   }
 }
 @media (min-width: 1400px) {
   :root {
     --n-base-padding: 0.28rem;
     --n-base-margin: 0.28rem;
+    --n-base-font-size: 18px;
   }
 }
 * {
@@ -194,6 +194,92 @@ html {
   gap: calc(var(--n-base-unit) * 1);
 }
 
+.n-w-5, .n-fw.n-w-5 {
+  width: 5%;
+}
+
+.n-w-10, .n-fw.n-w-10 {
+  width: 10%;
+}
+
+.n-w-15, .n-fw.n-w-15 {
+  width: 15%;
+}
+
+.n-w-20, .n-fw.n-w-20 {
+  width: 20%;
+}
+
+.n-w-25, .n-fw.n-w-25 {
+  width: 25%;
+}
+
+.n-w-30, .n-fw.n-w-30 {
+  width: 30%;
+}
+
+.n-w-35, .n-fw.n-w-35 {
+  width: 35%;
+}
+
+.n-w-40, .n-fw.n-w-40 {
+  width: 40%;
+}
+
+.n-w-45, .n-fw.n-w-45 {
+  width: 45%;
+}
+
+.n-w-50, .n-fw.n-w-50 {
+  width: 50%;
+}
+
+.n-w-55, .n-fw.n-w-55 {
+  width: 55%;
+}
+
+.n-w-60, .n-fw.n-w-60 {
+  width: 60%;
+}
+
+.n-w-65, .n-fw.n-w-65 {
+  width: 65%;
+}
+
+.n-w-70, .n-fw.n-w-70 {
+  width: 70%;
+}
+
+.n-w-75, .n-fw.n-w-75 {
+  width: 75%;
+}
+
+.n-w-80, .n-fw.n-w-80 {
+  width: 80%;
+}
+
+.n-w-85, .n-fw.n-w-85 {
+  width: 85%;
+}
+
+.n-w-90, .n-fw.n-w-90 {
+  width: 90%;
+}
+
+.n-w-95, .n-fw.n-w-95 {
+  width: 95%;
+}
+
+.n-w-100, .n-fw.n-w-100 {
+  width: 100%;
+}
+
+.n-flex.n-flex-eq-aw > * {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+}
+
 @media (min-width: 440px) and (max-width: 575px) {
   .n-oxsw-5 {
     width: 5%;
@@ -262,14 +348,16 @@ html {
         -ms-flex: 1 1 0px;
             flex: 1 1 0;
   }
-  .n-flex-aw-1234 > *,
   .n-flex-aw-12 > *,
   .n-flex-aw-112 > *,
   .n-flex-aw-112a > *,
+  .n-flex-aw-1234 > *,
   .n-flex-aw-1234a > * {
     width: 100%;
   }
   .n-flex-aw-2 > *,
+  .n-flex-aw-2223 > *,
+  .n-flex-aw-2223a > *,
   .n-flex-aw-22334 > *,
   .n-flex-aw-22334a > * {
     width: 50%;
@@ -356,6 +444,8 @@ html {
   }
   .n-flex-aw-12 > *,
   .n-flex-aw-1223 > *,
+  .n-flex-aw-2223 > *,
+  .n-flex-aw-2223a > *,
   .n-flex-aw-1234 > *,
   .n-flex-aw-1234a > *,
   .n-flex-aw-22334 > *,
@@ -448,6 +538,7 @@ html {
     width: 33.333333%;
   }
   .n-flex-1223 > *,
+  .n-flex-aw-2223 > *,
   .n-flex-aw-112 > *,
   .n-flex-aw-112a > * {
     width: 50%;
@@ -533,6 +624,7 @@ html {
     width: 25%;
   }
   .n-flex-aw-1223 > *,
+  .n-flex-aw-2223 > *,
   .n-flex-aw-22334 > *,
   .n-flex-aw-22334a > * {
     width: 33.33333%;
@@ -812,9 +904,9 @@ html {
   }
 }
 .n-flex-fw .n-fw {
-  -webkit-box-flex: 1;
-      -ms-flex: auto;
-          flex: auto;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
 }
 
 .txt-center {
@@ -829,46 +921,63 @@ html {
   text-align: end;
 }
 
+.txt-xs {
+  font-size: 70%;
+}
+
+.txt-sm {
+  font-size: 85%;
+}
+
+.txt-lg {
+  font-size: 115%;
+}
+
+.txt-xl {
+  font-size: 130%;
+}
+
 h1 {
   margin: calc(5 * var(--n-base-margin)) 0;
-  font-size: calc(15 * var(--n-base-font-size) / 8);
-  line-height: 1.7;
+  font-size: calc(2.2 * var(--n-base-font-size));
 }
 
 h2 {
   margin: calc(4 * var(--n-base-margin)) 0;
-  font-size: calc(14 * var(--n-base-font-size) / 8);
-  line-height: 1.6;
+  font-size: calc(1.6 * var(--n-base-font-size));
 }
 
 h3 {
   margin: calc(4 * var(--n-base-margin)) 0;
-  font-size: calc(13 * var(--n-base-font-size) / 8);
-  line-height: 1.5;
+  font-size: calc(1.4 * var(--n-base-font-size));
 }
 
 h4 {
   margin: calc(4 * var(--n-base-margin)) 0;
-  font-size: calc(12 * var(--n-base-font-size) / 8);
-  line-height: 1.5;
+  font-size: calc(1.3 * var(--n-base-font-size));
 }
 
 h5 {
   margin: calc(4 * var(--n-base-margin)) 0;
-  font-size: calc(11 * var(--n-base-font-size) / 8);
-  line-height: 1.5;
+  font-size: calc(1.2 * var(--n-base-font-size));
 }
 
 h6 {
   margin: calc(4 * var(--n-base-margin)) 0;
-  font-size: calc(10 * var(--n-base-font-size) / 8);
-  line-height: 1.5;
+  font-size: calc(1 * var(--n-base-font-size));
 }
 
 p {
   margin: calc(4 * var(--n-base-margin)) 0;
-  font-size: calc(9 * var(--n-base-font-size) / 8);
+  font-size: calc(1 * var(--n-base-font-size));
+}
+
+h1, h2, h3, h4, h5, h6, p {
   line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
 }
 
 ol,
@@ -876,11 +985,19 @@ ul {
   padding-left: calc(var(--n-base-padding) * 6);
   margin: calc(var(--n-base-margin) * 6) 0;
 }
+ol li,
+ul li {
+  margin: calc(2 * var(--n-base-margin)) 0;
+}
+
+pre code {
+  padding: calc(var(--n-base-padding) * 4) calc(var(--n-base-padding) * 2);
+}
 
 code {
-  background: #E0E0E0;
+  background: color-mix(in srgb, white 90%, var(--n-text-color));
   display: inline-block;
-  padding: calc(var(--n-base-padding) * 4);
+  padding: calc(var(--n-base-padding) / 4) calc(var(--n-base-padding) * 2);
 }
 
 .t-em {
@@ -890,6 +1007,10 @@ code {
 .t-uline {
   -webkit-text-decoration: 4px underline;
           text-decoration: 4px underline;
+}
+
+.t-noline {
+  text-decoration: none;
 }
 
 .c-inherit {
@@ -982,12 +1103,14 @@ table.n-row-borders th {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
-  padding: calc(var(--n-base-padding) * 4) calc(var(--n-base-padding) * 8);
+  padding: calc(var(--n-base-padding) * 2) calc(var(--n-base-padding) * 8);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 nav.n-navigation .n-navlink-group {
@@ -1006,7 +1129,7 @@ nav.n-navigation.shrinker .n-navlink-group {
 }
 
 .nav-brand {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .n-navigation.shrinker ol {
@@ -1029,7 +1152,7 @@ nav.n-navigation.shrinker .n-navlink-group {
 }
 
 .n-navigation .menu-opener.open-menu ~ div.n-navlink-group {
-  border-top: 1px solid color-mix(in srgb, currentColor 40%, white);
+  border-top: 1px dashed color-mix(in srgb, var(--n-brand-primary-color) 40%, white);
   margin-top: calc(var(--n-base-margin) * 3);
   padding-top: calc(var(--n-base-padding) * 3);
 }
@@ -1055,7 +1178,7 @@ nav.n-navigation.shrinker .n-navlink-group {
 }
 
 .n-navigation ol {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   display: none;
   list-style: none;
   gap: 1rem;
@@ -1075,10 +1198,22 @@ nav.n-navigation.shrinker .n-navlink-group {
   display: inline-block;
 }
 
+.n-navigation.main-nav .n-navlink-group a {
+  color: var(--n-brand-primary-color);
+}
+
+.n-navigation.main-nav .n-navlink-group a:hover {
+  color: var(--n-brand-secondary-color);
+}
+
 .n-navigation a:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.05) translateY(-2px);
+          transform: scale(1.05) translateY(-2px);
   -webkit-text-stroke: 1px;
+}
+
+.n-navigation a span:nth-child(n+2) {
+  font-weight: 700;
 }
 
 .n-navlink-group {
@@ -1103,6 +1238,7 @@ nav.n-navigation.shrinker .n-navlink-group {
 .menu-opener {
   font-size: 200%;
   cursor: pointer;
+  color: var(--n-brand-primary-color);
 }
 
 @media (min-width: 768px) {
@@ -1135,11 +1271,9 @@ nav.n-navigation.shrinker .n-navlink-group {
   padding: 0;
 }
 .pagination li {
-  padding: 0.5rem 1rem;
   background: color-mix(in srgb, currentColor 15%, white);
   -webkit-transition: 0.2s all;
   transition: 0.2s all;
-  cursor: pointer;
 }
 .pagination li:hover {
   background: color-mix(in srgb, currentColor 5%, white);
@@ -1193,6 +1327,8 @@ nav ul.pagination li.disabled {
 .pagination li a {
   text-decoration: none;
   color: currentColor;
+  padding: calc(2 * var(--n-base-padding)) calc(4 * var(--n-base-padding));
+  display: inline-block;
 }
 
 .n-flex figure {
@@ -1232,6 +1368,7 @@ figure.n-more-rounded.caption-overlay figcaption {
 
 img.n-image-responsive {
   max-width: 100%;
+  height: auto;
 }
 
 .n-acc-item-head {
@@ -1498,216 +1635,216 @@ ul.n-tabs {
   color: white;
 }
 
-.tc-green,
-.tch-green {
-  color: var(--n-green-color);
+.tc-success,
+.tch-success {
+  color: var(--n-success-color);
 }
 
-.tcl-green,
-.tclh-green {
-  color: color-mix(in srgb, var(--n-green-color) 50%, white);
+.tcl-success,
+.tclh-success {
+  color: color-mix(in srgb, var(--n-success-color) 50%, white);
 }
-.tcl-green.n-alert, .tcl-green.pagination li,
-.tclh-green.n-alert,
-.tclh-green.pagination li {
-  color: var(--n-green-color);
+.tcl-success.n-alert, .tcl-success.pagination li,
+.tclh-success.n-alert,
+.tclh-success.pagination li {
+  color: var(--n-success-color);
 }
 
-.tch-green:hover {
-  color: color-mix(in srgb, var(--n-green-color) 85%, black);
+.tch-success:hover {
+  color: color-mix(in srgb, var(--n-success-color) 85%, black);
 }
-.tch-green.n-alert:hover, .tch-green.pagination li:hover {
+.tch-success.n-alert:hover, .tch-success.pagination li:hover {
   color: white;
-  background: color-mix(in srgb, var(--n-green-color) 85%, black);
+  background: color-mix(in srgb, var(--n-success-color) 85%, black);
 }
 
-.tclh-green:hover {
-  color: color-mix(in srgb, var(--n-green-color) 70%, white);
+.tclh-success:hover {
+  color: color-mix(in srgb, var(--n-success-color) 70%, white);
 }
-.tclh-green.n-alert:hover, .tclh-green.pagination li:hover {
+.tclh-success.n-alert:hover, .tclh-success.pagination li:hover {
   color: black;
-  background: color-mix(in srgb, var(--n-green-color) 50%, white);
+  background: color-mix(in srgb, var(--n-success-color) 50%, white);
 }
 
-.bg-green,
-.bgh-green {
-  background: var(--n-green-color);
+.bg-success,
+.bgh-success {
+  background: var(--n-success-color);
 }
 
-.bgl-green,
-.bglh-green {
-  background: color-mix(in srgb, var(--n-green-color) 50%, white);
+.bgl-success,
+.bglh-success {
+  background: color-mix(in srgb, var(--n-success-color) 50%, white);
 }
 
-.bgle-green {
-  background: color-mix(in srgb, var(--n-green-color) 15%, white);
+.bgle-success {
+  background: color-mix(in srgb, var(--n-success-color) 15%, white);
 }
 
-.bgh-green:hover {
-  background: color-mix(in srgb, var(--n-green-color) 85%, black);
+.bgh-success:hover {
+  background: color-mix(in srgb, var(--n-success-color) 85%, black);
 }
 
-.bglh-green:hover {
-  background: color-mix(in srgb, var(--n-green-color) 70%, white);
+.bglh-success:hover {
+  background: color-mix(in srgb, var(--n-success-color) 70%, white);
 }
 
-.tc-red,
-.tch-red {
-  color: var(--n-red-color);
+.tc-failure,
+.tch-failure {
+  color: var(--n-failure-color);
 }
 
-.tcl-red,
-.tclh-red {
-  color: color-mix(in srgb, var(--n-red-color) 50%, white);
+.tcl-failure,
+.tclh-failure {
+  color: color-mix(in srgb, var(--n-failure-color) 50%, white);
 }
-.tcl-red.n-alert, .tcl-red.pagination li,
-.tclh-red.n-alert,
-.tclh-red.pagination li {
-  color: var(--n-red-color);
+.tcl-failure.n-alert, .tcl-failure.pagination li,
+.tclh-failure.n-alert,
+.tclh-failure.pagination li {
+  color: var(--n-failure-color);
 }
 
-.tch-red:hover {
-  color: color-mix(in srgb, var(--n-red-color) 85%, black);
+.tch-failure:hover {
+  color: color-mix(in srgb, var(--n-failure-color) 85%, black);
 }
-.tch-red.n-alert:hover, .tch-red.pagination li:hover {
+.tch-failure.n-alert:hover, .tch-failure.pagination li:hover {
   color: white;
-  background: color-mix(in srgb, var(--n-red-color) 85%, black);
+  background: color-mix(in srgb, var(--n-failure-color) 85%, black);
 }
 
-.tclh-red:hover {
-  color: color-mix(in srgb, var(--n-red-color) 70%, white);
+.tclh-failure:hover {
+  color: color-mix(in srgb, var(--n-failure-color) 70%, white);
 }
-.tclh-red.n-alert:hover, .tclh-red.pagination li:hover {
+.tclh-failure.n-alert:hover, .tclh-failure.pagination li:hover {
   color: black;
-  background: color-mix(in srgb, var(--n-red-color) 50%, white);
+  background: color-mix(in srgb, var(--n-failure-color) 50%, white);
 }
 
-.bg-red,
-.bgh-red {
-  background: var(--n-red-color);
+.bg-failure,
+.bgh-failure {
+  background: var(--n-failure-color);
 }
 
-.bgl-red,
-.bglh-red {
-  background: color-mix(in srgb, var(--n-red-color) 50%, white);
+.bgl-failure,
+.bglh-failure {
+  background: color-mix(in srgb, var(--n-failure-color) 50%, white);
 }
 
-.bgle-red {
-  background: color-mix(in srgb, var(--n-red-color) 15%, white);
+.bgle-failure {
+  background: color-mix(in srgb, var(--n-failure-color) 15%, white);
 }
 
-.bgh-red:hover {
-  background: color-mix(in srgb, var(--n-red-color) 85%, black);
+.bgh-failure:hover {
+  background: color-mix(in srgb, var(--n-failure-color) 85%, black);
 }
 
-.bglh-red:hover {
-  background: color-mix(in srgb, var(--n-red-color) 70%, white);
+.bglh-failure:hover {
+  background: color-mix(in srgb, var(--n-failure-color) 70%, white);
 }
 
-.tc-orange,
-.tch-orange {
-  color: var(--n-orange-color);
+.tc-warning,
+.tch-warning {
+  color: var(--n-warning-color);
 }
 
-.tcl-orange,
-.tclh-orange {
-  color: color-mix(in srgb, var(--n-orange-color) 50%, white);
+.tcl-warning,
+.tclh-warning {
+  color: color-mix(in srgb, var(--n-warning-color) 50%, white);
 }
-.tcl-orange.n-alert, .tcl-orange.pagination li,
-.tclh-orange.n-alert,
-.tclh-orange.pagination li {
-  color: var(--n-orange-color);
+.tcl-warning.n-alert, .tcl-warning.pagination li,
+.tclh-warning.n-alert,
+.tclh-warning.pagination li {
+  color: var(--n-warning-color);
 }
 
-.tch-orange:hover {
-  color: color-mix(in srgb, var(--n-orange-color) 85%, black);
+.tch-warning:hover {
+  color: color-mix(in srgb, var(--n-warning-color) 85%, black);
 }
-.tch-orange.n-alert:hover, .tch-orange.pagination li:hover {
+.tch-warning.n-alert:hover, .tch-warning.pagination li:hover {
   color: white;
-  background: color-mix(in srgb, var(--n-orange-color) 85%, black);
+  background: color-mix(in srgb, var(--n-warning-color) 85%, black);
 }
 
-.tclh-orange:hover {
-  color: color-mix(in srgb, var(--n-orange-color) 70%, white);
+.tclh-warning:hover {
+  color: color-mix(in srgb, var(--n-warning-color) 70%, white);
 }
-.tclh-orange.n-alert:hover, .tclh-orange.pagination li:hover {
+.tclh-warning.n-alert:hover, .tclh-warning.pagination li:hover {
   color: black;
-  background: color-mix(in srgb, var(--n-orange-color) 50%, white);
+  background: color-mix(in srgb, var(--n-warning-color) 50%, white);
 }
 
-.bg-orange,
-.bgh-orange {
-  background: var(--n-orange-color);
+.bg-warning,
+.bgh-warning {
+  background: var(--n-warning-color);
 }
 
-.bgl-orange,
-.bglh-orange {
-  background: color-mix(in srgb, var(--n-orange-color) 50%, white);
+.bgl-warning,
+.bglh-warning {
+  background: color-mix(in srgb, var(--n-warning-color) 50%, white);
 }
 
-.bgle-orange {
-  background: color-mix(in srgb, var(--n-orange-color) 15%, white);
+.bgle-warning {
+  background: color-mix(in srgb, var(--n-warning-color) 15%, white);
 }
 
-.bgh-orange:hover {
-  background: color-mix(in srgb, var(--n-orange-color) 85%, black);
+.bgh-warning:hover {
+  background: color-mix(in srgb, var(--n-warning-color) 85%, black);
 }
 
-.bglh-orange:hover {
-  background: color-mix(in srgb, var(--n-orange-color) 70%, white);
+.bglh-warning:hover {
+  background: color-mix(in srgb, var(--n-warning-color) 70%, white);
 }
 
-.tc-azure,
-.tch-azure {
-  color: var(--n-azure-color);
+.tc-neutral,
+.tch-neutral {
+  color: var(--n-neutral-color);
 }
 
-.tcl-azure,
-.tclh-azure {
-  color: color-mix(in srgb, var(--n-azure-color) 50%, white);
+.tcl-neutral,
+.tclh-neutral {
+  color: color-mix(in srgb, var(--n-neutral-color) 50%, white);
 }
-.tcl-azure.n-alert, .tcl-azure.pagination li,
-.tclh-azure.n-alert,
-.tclh-azure.pagination li {
-  color: var(--n-azure-color);
+.tcl-neutral.n-alert, .tcl-neutral.pagination li,
+.tclh-neutral.n-alert,
+.tclh-neutral.pagination li {
+  color: var(--n-neutral-color);
 }
 
-.tch-azure:hover {
-  color: color-mix(in srgb, var(--n-azure-color) 85%, black);
+.tch-neutral:hover {
+  color: color-mix(in srgb, var(--n-neutral-color) 85%, black);
 }
-.tch-azure.n-alert:hover, .tch-azure.pagination li:hover {
+.tch-neutral.n-alert:hover, .tch-neutral.pagination li:hover {
   color: white;
-  background: color-mix(in srgb, var(--n-azure-color) 85%, black);
+  background: color-mix(in srgb, var(--n-neutral-color) 85%, black);
 }
 
-.tclh-azure:hover {
-  color: color-mix(in srgb, var(--n-azure-color) 70%, white);
+.tclh-neutral:hover {
+  color: color-mix(in srgb, var(--n-neutral-color) 70%, white);
 }
-.tclh-azure.n-alert:hover, .tclh-azure.pagination li:hover {
+.tclh-neutral.n-alert:hover, .tclh-neutral.pagination li:hover {
   color: black;
-  background: color-mix(in srgb, var(--n-azure-color) 50%, white);
+  background: color-mix(in srgb, var(--n-neutral-color) 50%, white);
 }
 
-.bg-azure,
-.bgh-azure {
-  background: var(--n-azure-color);
+.bg-neutral,
+.bgh-neutral {
+  background: var(--n-neutral-color);
 }
 
-.bgl-azure,
-.bglh-azure {
-  background: color-mix(in srgb, var(--n-azure-color) 50%, white);
+.bgl-neutral,
+.bglh-neutral {
+  background: color-mix(in srgb, var(--n-neutral-color) 50%, white);
 }
 
-.bgle-azure {
-  background: color-mix(in srgb, var(--n-azure-color) 15%, white);
+.bgle-neutral {
+  background: color-mix(in srgb, var(--n-neutral-color) 15%, white);
 }
 
-.bgh-azure:hover {
-  background: color-mix(in srgb, var(--n-azure-color) 85%, black);
+.bgh-neutral:hover {
+  background: color-mix(in srgb, var(--n-neutral-color) 85%, black);
 }
 
-.bglh-azure:hover {
-  background: color-mix(in srgb, var(--n-azure-color) 70%, white);
+.bglh-neutral:hover {
+  background: color-mix(in srgb, var(--n-neutral-color) 70%, white);
 }
 
 .tc-text,
@@ -2442,6 +2579,8 @@ ol.vrt-group, ol.hrz-group, li.vrt-group, li.hrz-group {
 
 hr {
   color: color-mix(in srgb, currentColor 25%, white);
+  margin: calc(var(--n-base-margin) * 2) 0;
+  border-bottom: none;
 }
 
 .fade {

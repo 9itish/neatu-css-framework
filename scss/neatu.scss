@@ -44,6 +44,8 @@ html {
 
 hr {
     color: color-mix(in srgb, currentColor 25%, white);
+    margin: calc(var(--n-base-margin)*2) 0;
+    border-bottom: none;
 }
 
 

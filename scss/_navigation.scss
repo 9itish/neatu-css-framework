@@ -1,9 +1,11 @@
 .n-navigation {
     display: flex;
     justify-content: end;
-    padding: calc(var(--n-base-padding)*4) calc(var(--n-base-padding)*8);
+    padding: calc(var(--n-base-padding)*2) calc(var(--n-base-padding)*8);
     align-items: center;
     flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 nav.n-navigation .n-navlink-group {
@@ -16,7 +18,7 @@ nav.n-navigation.shrinker .n-navlink-group {
 }
 
 .nav-brand {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 .n-navigation.shrinker ol {
@@ -37,7 +39,7 @@ nav.n-navigation.shrinker .n-navlink-group {
 }
 
 .n-navigation .menu-opener.open-menu ~ div.n-navlink-group {
-    border-top: 1px solid color-mix(in srgb, currentColor 40%, white);;
+    border-top: 1px dashed color-mix(in srgb, var(--n-brand-primary-color) 40%, white);
     margin-top: calc(var(--n-base-margin) * 3);
     padding-top: calc(var(--n-base-padding) * 3);
 }
@@ -54,7 +56,7 @@ nav.n-navigation.shrinker .n-navlink-group {
 }
 
 .n-navigation ol {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     display: none;
     list-style: none;
     gap: 1rem;
@@ -73,9 +75,21 @@ nav.n-navigation.shrinker .n-navlink-group {
     display: inline-block;
 }
 
+.n-navigation.main-nav .n-navlink-group a {
+    color: var(--n-brand-primary-color);
+}
+
+.n-navigation.main-nav .n-navlink-group a:hover {
+    color: var(--n-brand-secondary-color);
+}
+
 .n-navigation a:hover {
-    transform: scale(1.1);
+    transform: scale(1.05) translateY(-2px);
     -webkit-text-stroke: 1px;
+}
+
+.n-navigation a span:nth-child(n + 2) {
+    font-weight: 700;
 }
 
 .n-navlink-group {
@@ -96,6 +110,7 @@ nav.n-navigation.shrinker .n-navlink-group {
 .menu-opener {
     font-size: 200%;
     cursor: pointer;
+    color: var(--n-brand-primary-color);
 }
 
 @media (min-width: map-get($viewport-widths, 'm')) {
