@@ -1,0 +1,49 @@
+@use 'variables' as variables;
+
+.ntu-card {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.ntu-card:not(.ntu-bshadow, .ntu-card-hr) {
+    border: 1px solid var(--ntu-border-color);
+}
+
+.ntu-fash .ntu-card {
+    height: 100%;
+}
+
+.ntu-card-hr {
+    height: 100%;
+    align-items: center;
+
+    img {
+        height: fit-content;
+        max-width: 100%;
+    }
+
+    .ntu-card-body {
+        padding: 0 calc(var(--ntu-base-padding)*5);
+    }
+}
+
+.ntu-card-body {
+    padding: calc(var(--ntu-base-padding)*4);
+}
+
+@media (max-width: calc(map-get(variables.$viewport-widths, 's') - 1px)) {
+    .ntu-card-hr:not(.ntu-bshadow) {
+        border: 1px solid var(--ntu-border-color);
+    }
+}
+
+@media (min-width: map-get(variables.$viewport-widths, 's')) {
+    .ntu-card-hr {
+        flex-direction: row;
+
+        img {
+            max-width: 50%;
+        }
+    }
+}

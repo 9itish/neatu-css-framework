@@ -1,0 +1,38 @@
+.ntu-alert {
+  padding: var(--ntu-base-padding) calc(var(--ntu-base-padding) * 4);
+  background: color-mix(in srgb, currentColor 10%, white);
+  color: var(--ntu-text-color);
+  margin: calc(var(--ntu-base-margin) * 4) 0;
+}
+
+.ntu-alert.ntu-bshadow,
+.ntu-alert.ntu-bshadow-cc {
+  border: calc(var(--ntu-border-width) * 6) solid white;
+}
+
+.ntu-alert.ntu-outline {
+  background: transparent;
+}
+
+.ntu-alert.ntu-outline-hover:hover {
+  background: color-mix(in srgb, currentColor 10%, white);
+}
+
+.ntu-alert.ntu-outline-x2 {
+  background: transparent;
+}
+
+.ntu-alert.ntu-outline-x3 {
+  background: transparent;
+}
+
+.ntu-alert.ntu-outline-x4 {
+  background: transparent;
+}
+
+.ntu-alert .ntu-close-alert {
+  font-size: 125%;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=alerts.css.map */

@@ -1,293 +1,122 @@
-const accordionItems = document.querySelectorAll('.n-acc-item');
+// Utility functions
+function toggleIcon(el, removeClass, addClass) {
+  if (el) {
+    el.classList.remove(removeClass);
+    el.classList.add(addClass);
+  }
+}
 
+function collapseItem(item) {
+  const content = item.querySelector('.ntu-acc-item-body');
+  const icon = item.querySelector('.fa-minus');
+  content.style.height = '0px';
+  item.classList.remove('open');
+  toggleIcon(icon, 'fa-minus', 'fa-plus');
+}
+
+function expandItem(item) {
+  const content = item.querySelector('.ntu-acc-item-body');
+  const icon = item.querySelector('.fa-plus');
+  content.style.height = content.scrollHeight + 'px';
+  item.classList.add('open');
+  toggleIcon(icon, 'fa-plus', 'fa-minus');
+}
+
+function closeAllAccordions() {
+  accordionItems.forEach(item => {
+    if (item.classList.contains('open')) collapseItem(item);
+  });
+}
+
+const accordionItems = document.querySelectorAll('.ntu-acc-item');
 accordionItems.forEach(item => {
-  const header = item.querySelector('.n-acc-item-head');
-  const content = item.querySelector('.n-acc-item-body');
-
-  header.addEventListener('click', (event) => {
-    // item.classList.add('just-clicked');
+  const header = item.querySelector('.ntu-acc-item-head');
+  header.addEventListener('click', () => {
     if (item.classList.contains('open')) {
-        content.style.height = '0px'; // Collapse animation
-        item.classList.remove('open');
-
-        const minusIcon = header.querySelector('.fa-solid.fa-minus');
-        
-        if (minusIcon) {
-            minusIcon.classList.remove('fa-minus'); // Optional: Remove FontAwesome classes
-            minusIcon.classList.add('fa-plus'); // Add your negative icon class
-        }
+      collapseItem(item);
     } else {
-
       closeAllAccordions();
-
-      if(item.classList.contains('n-acc-stay-open')) {
-        item.classList.remove('n-acc-stay-open');
-        content.style.height = '0px'; // Collapse animation
-        item.classList.remove('open');
-
-        const minusIcon = header.querySelector('.fa-solid.fa-minus');
-        
-        if (minusIcon) {
-            minusIcon.classList.remove('fa-minus'); // Optional: Remove FontAwesome classes
-            minusIcon.classList.add('fa-plus'); // Add your negative icon class
-        }
+      if (item.classList.contains('ntu-acc-stay-open')) {
+        item.classList.remove('ntu-acc-stay-open');
+        collapseItem(item);
       } else {
-
-        const contentHeight = content.scrollHeight + 'px'; // Get actual height
-        content.style.height = contentHeight; // Set dynamic height
-        item.classList.add('open');
-
-        const plusIcon = header.querySelector('.fa-solid.fa-plus');
-
-        if (plusIcon) {
-            plusIcon.classList.remove('fa-plus'); // Optional: Remove FontAwesome classes
-            plusIcon.classList.add('fa-minus'); // Add your negative icon class
-        }
+        expandItem(item);
       }
     }
   });
 });
 
-function closeAllAccordions() {
-  accordionItems.forEach(item => {
-    const header = item.querySelector('.n-acc-item-head');
-    const content = item.querySelector('.n-acc-item-body');
-
-
-    if (item.classList.contains('open')) {
-        content.style.height = '0px'; // Collapse animation
-        item.classList.remove('open');
-
-        const minusIcon = header.querySelector('.fa-solid.fa-minus');
-        
-        if (minusIcon) {
-            minusIcon.classList.remove('fa-minus'); // Optional: Remove FontAwesome classes
-            minusIcon.classList.add('fa-plus'); // Add your negative icon class
-        }
-    }
-
-  });
-}
-
-const menuOpeners = document.querySelectorAll(".n-navigation .menu-opener");
-
-for(menuOpener of menuOpeners) {
-  menuOpener.addEventListener("click", function(event) {
-
-    let closeClass = this.dataset.close;
-    let openClass = this.dataset.open;
-
-    if(this.classList.contains("open-menu")) {
-      this.classList.remove("open-menu");
-      this.classList.remove(openClass);
-      this.classList.add(closeClass);
-    } else {
-      this.classList.add("open-menu");
-      this.classList.add(openClass);
-      this.classList.remove(closeClass);
-    }
+const menuOpeners = document.querySelectorAll(".ntu-nav .ntu-nav-opener");
+for (const menuOpener of menuOpeners) {
+  menuOpener.addEventListener("click", function () {
+    const closeClass = this.dataset.close;
+    const openClass = this.dataset.open;
+    this.classList.toggle("ntu-nav-open");
+    this.classList.toggle(openClass);
+    this.classList.toggle(closeClass);
   });
 }
 
 function moveElementToBeginning(element, targetParent) {
-
-  console.log(`Move ${element.textContent} To Beginning`);
-
-  if(element) {
-    const elementParent = element.parentNode;
-    elementParent.removeChild(element);
+  if (element) {
+    element.parentNode.removeChild(element);
     targetParent.prepend(element);
-
-    console.log(targetParent.children);
-  } else {
-    console.log("Null Element To Beginning");
   }
 }
 
 function moveElementToEnd(element, targetParent) {
-
-  console.log(`Moved ${element.textContent} To End`);
-
-  if(element) {
-    const elementParent = element.parentNode; 
-    elementParent.removeChild(element);
+  if (element) {
+    element.parentNode.removeChild(element);
     targetParent.append(element);
-  } else {
-    console.log("Null Element To End");
   }
-
 }
 
 function calculateTotalWidth(elements) {
   let totalWidth = 0;
   for (const item of elements) {
-    const itemWidth = item.getBoundingClientRect().width;
-    totalWidth += itemWidth;
+    totalWidth += item.getBoundingClientRect().width;
   }
-
   return totalWidth;
 }
 
 function adjustingMenu(menu_id) {
-  const menu = document.querySelector(`#${menu_id}.shrinker`);
-  const navItems = document.querySelectorAll(`#${menu_id} .nav-brand, #${menu_id}.shrinker > ol, #${menu_id} .menu-opener`);
+  const menu = document.querySelector(`#${menu_id}.ntu-nav-shrink`);
+  const navItems = document.querySelectorAll(`#${menu_id} .nav-brand, #${menu_id}.ntu-nav-shrink > ul, #${menu_id} .ntu-nav-opener`);
   const availableWidth = menu.parentElement.clientWidth;
-
-  const menuOpenerMenu = document.querySelector(`#${menu_id} .n-navlink-group ol`);
-
+  const overflowList = document.querySelector(`#${menu_id} .ntu-nav-grp ul`);
   let totalWidth = calculateTotalWidth(navItems);
-
-  let maxIterations = 10; // Set a limit for maximum iterations
   let iterationCount = 0;
 
-  let element = document.querySelector(`#${menu_id}.shrinker > ol > li:last-child`);
-  let targetParent = document.querySelector(`#${menu_id} .n-navlink-group ol`);
-
-  while((totalWidth + 300) > availableWidth && element && iterationCount < maxIterations) {
-
-    element = document.querySelector(`#${menu_id}.shrinker > ol > li:last-child`);
-    targetParent = document.querySelector(`#${menu_id} .n-navlink-group ol`);
-
-    moveElementToBeginning(element, targetParent);
+  while ((totalWidth + 300) > availableWidth && iterationCount < 10) {
+    const item = document.querySelector(`#${menu_id}.ntu-nav-shrink > ul > li:last-child`);
+    moveElementToBeginning(item, overflowList);
     totalWidth = calculateTotalWidth(navItems);
-
     iterationCount++;
   }
 
-  element = document.querySelector(`#${menu_id} .n-navlink-group ol > li:first-child`);
-  targetParent = document.querySelector(`#${menu_id}.shrinker > ol`);
   iterationCount = 0;
-
-  while((totalWidth + 300) < availableWidth && element && iterationCount < maxIterations) {
-
-    moveElementToEnd(element, targetParent);
+  while ((totalWidth + 300) < availableWidth && iterationCount < 10) {
+    const item = overflowList.querySelector('li:first-child');
+    moveElementToEnd(item, document.querySelector(`#${menu_id}.ntu-nav-shrink > ul`));
     totalWidth = calculateTotalWidth(navItems);
-
     iterationCount++;
-
   }
 
-  if(menuOpenerMenu.querySelectorAll("li").length > 0) {
-    menuOpenerMenu.classList.add("has-nav-items");
-    document.querySelector(`nav#${menu_id} ol`)
-    document.querySelector(`nav#${menu_id} i.menu-opener`).classList.add("visible");
+  const opener = document.querySelector(`nav#${menu_id} i.ntu-nav-opener`);
+  if (overflowList.querySelectorAll("li").length > 0) {
+    overflowList.classList.add("has-nav-items");
+    opener.classList.add("visible");
   } else {
-    document.querySelector(`nav#${menu_id} i.menu-opener`).classList.remove("visible");
-    menuOpenerMenu.classList.remove("has-nav-items");
+    opener.classList.remove("visible");
+    overflowList.classList.remove("has-nav-items");
   }
-
 }
-
-let closeElems = document.querySelectorAll(".n-closer");
-
-for(closeElem of closeElems) {
-  closeElem.addEventListener("click", function(event) {
-
-    let targetElemId = this.dataset.nuTarget;
-
-    let targetElem = document.getElementById(targetElemId);
-
-    hideElement(targetElem);
-  });
-}
-
-function removeClasses(elementObject, classesString) {
-
-  const classes = classesString.split(' ');
-
-  for (const class_name of classes) {
-    elementObject.classList.remove(class_name);
-  }
-
-  return elementObject;
-}
-
-function addClasses(elementObject, classesString) {
-
-  const classes = classesString.split(' ');
-
-  for (const class_name of classes) {
-    elementObject.classList.add(class_name);
-  }
-
-  return elementObject;
-}
-
-let parentsWithChildClasses = document.querySelectorAll("[data-neat-child-classes]");
-
-for (const parent of parentsWithChildClasses) {
-
-  const classString = parent.getAttribute('data-neat-child-classes');
-
-  for (const child of parent.children) {
-    addClasses(child, classString);
-  }
-  
-}
-
-let openElems = document.querySelectorAll(".n-opener");
-
-for(openElem of openElems) {
-  openElem.addEventListener("click", function(event) {
-
-    let targetElemId = this.dataset.nuTarget;
-
-    let targetElem = document.getElementById(targetElemId);
-
-    showElement(targetElem);
-  });
-}
-
-let tabBtnElems = document.querySelectorAll(".n-tabs .n-btn");
-
-for(tabBtnElem of tabBtnElems) {
-  tabBtnElem.addEventListener("click", function(event) {
-
-    let tabBtnParent = this.parentElement.parentElement;
-    tabBtnParent.querySelector('.active').classList.remove('active');
-    this.parentElement.classList.add('active');
-
-    let targetElemId = this.dataset.nuTarget;
-    let targetElem = document.getElementById(targetElemId);
-    let currentPaneParent = targetElem.parentElement;
-    currentPaneParent.querySelector('.active').classList.remove('active');
-
-    targetElem.classList.add('active');
-  });
-}
-
-let pillBtnElems = document.querySelectorAll(".n-pills .n-btn");
-
-for(pillBtnElem of pillBtnElems) {
-  pillBtnElem.addEventListener("click", function(event) {
-
-    let pillBtnParent = this.parentElement.parentElement;
-    let pillBtnClassesToApply = pillBtnParent.dataset.nuTabClasses;
-
-    console.log(pillBtnClassesToApply);
-
-    removeClasses(pillBtnParent.querySelector('.active .n-btn'), pillBtnClassesToApply);
-    pillBtnParent.querySelector('.active').classList.remove('active');
-    this.parentElement.classList.add('active');
-    
-    addClasses(pillBtnParent.querySelector('.active .n-btn'), pillBtnClassesToApply);
-
-    let targetElemId = this.dataset.nuTarget;
-    let targetElem = document.getElementById(targetElemId);
-    let currentPaneParent = targetElem.parentElement;
-    currentPaneParent.querySelector('.active').classList.remove('active');
-
-    targetElem.classList.add('active');
-  });
-}
-
 
 function hideElement(targetElem) {
   targetElem.classList.remove('fade-in');
   targetElem.classList.add('fade-out');
-
   targetElem.addEventListener('transitionend', () => {
-    if(targetElem.classList.contains('fade-out')) {
+    if (targetElem.classList.contains('fade-out')) {
       targetElem.classList.add('hide');
     }
   });
@@ -296,8 +125,60 @@ function hideElement(targetElem) {
 function showElement(targetElem) {
   targetElem.classList.add('fade-in');
   targetElem.classList.remove('hide');
-
-  setTimeout(function() {
-    targetElem.classList.remove('fade-out');
-  }, 100);
+  setTimeout(() => targetElem.classList.remove('fade-out'), 100);
 }
+
+function removeClasses(el, classes) {
+  classes.split(' ').forEach(c => el.classList.remove(c));
+  return el;
+}
+
+function addClasses(el, classes) {
+  classes.split(' ').forEach(c => el.classList.add(c));
+  return el;
+}
+
+document.querySelectorAll(".ntu-closer").forEach(closeElem => {
+  closeElem.addEventListener("click", function () {
+    hideElement(document.getElementById(this.dataset.ntuTarget));
+  });
+});
+
+document.querySelectorAll("[data-ntu-child-classes]").forEach(parent => {
+  const classes = parent.getAttribute('data-ntu-child-classes');
+  [...parent.children].forEach(child => addClasses(child, classes));
+});
+
+document.querySelectorAll(".ntu-opener").forEach(openElem => {
+  openElem.addEventListener("click", function () {
+    showElement(document.getElementById(this.dataset.ntuTarget));
+  });
+});
+
+document.querySelectorAll(".ntu-tabs .ntu-btn").forEach(tabBtn => {
+  tabBtn.addEventListener("click", function () {
+    const tabContainer = this.closest('.ntu-tabs');
+    tabContainer.querySelector('.active').classList.remove('active');
+    this.parentElement.classList.add('active');
+
+    const target = document.getElementById(this.dataset.ntuTarget);
+    target.parentElement.querySelector('.active').classList.remove('active');
+    target.classList.add('active');
+  });
+});
+
+document.querySelectorAll(".ntu-pills .ntu-btn").forEach(pillBtn => {
+  pillBtn.addEventListener("click", function () {
+    const parent = this.closest('.ntu-pills');
+    const classes = parent.dataset.ntuTabClasses;
+
+    removeClasses(parent.querySelector('.active .ntu-btn'), classes);
+    parent.querySelector('.active').classList.remove('active');
+    this.parentElement.classList.add('active');
+    addClasses(this, classes);
+
+    const target = document.getElementById(this.dataset.ntuTarget);
+    target.parentElement.querySelector('.active').classList.remove('active');
+    target.classList.add('active');
+  });
+});

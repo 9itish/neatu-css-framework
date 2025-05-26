@@ -1,0 +1,17 @@
+{
+  "name": "neatu-css",
+  "version": "3.0.0",
+  "description": "A lightweight, utility-first CSS framework built with SCSS",
+  "main": "css/neatu.css",
+  "scripts": {
+    "sass:watch-all": "sass --watch scss/:css/",
+    "sass:watch": "sass --watch scss/flexbox.scss:css/flexbox.css scss/neatu.scss:css/neatu.css",
+    "sass:build": "sass scss/neatu.scss:css/neatu.css && sass scss/neatu.scss:css/neatu.min.css --style=compressed",
+    "start": "npm run sass:watch"
+  },
+  "author": "Nitish Kumar",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.89.0"
+  }
+}

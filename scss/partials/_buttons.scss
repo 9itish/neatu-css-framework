@@ -1,0 +1,49 @@
+.ntu-btn,
+input[type="submit"].ntu-btn,
+input[type="reset"].ntu-btn {
+    padding: calc(var(--ntu-base-padding)*3);
+    font-size: calc(var(--ntu-base-font-size)*1.25);
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;  
+}
+
+.ntu-lg-btn {
+    font-size: calc(var(--ntu-base-font-size)*1.5);
+    padding: calc(var(--ntu-base-padding)*6) calc(var(--ntu-base-padding)*3);
+}
+
+.ntu-sm-btn {
+    font-size: var(--ntu-base-font-size);
+    padding: var(--ntu-base-padding) calc(var(--ntu-base-padding)*0.5);
+}
+
+.ntu-db-btn {
+    cursor: initial;
+    pointer-events: none;
+}
+
+.ntu-btn.ntu-outline-hover:hover {
+    background: color-mix(in srgb, currentColor 10%, white);
+}
+
+.ntu-btn.ntu-tx-btn {
+    background: none;
+}
+
+.ntu-btn[class*="n-outline"] {
+    background: transparent;
+}
+
+.ntu-btn.ntu-border {
+    border: var(--ntu-border-width) solid rgba(0, 0, 0, 0.3);
+}
+
+.ntu-pills .ntu-btn {
+    padding: calc(var(--ntu-base-padding) * 2) calc(var(--ntu-base-padding) * 4);
+}
+
+.ntu-hr-group .ntu-btn {
+    padding: calc(var(--ntu-base-padding) * 2);
+}

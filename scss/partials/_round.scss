@@ -1,0 +1,25 @@
+.ntu-round {
+    border-radius: var(--ntu-border-radius);
+}
+
+.ntu-circle {
+    border-radius: 50%;
+}
+
+.ntu-c-round>* {
+    border-radius: var(--ntu-border-radius);
+}
+
+.ntu-c-circle>* {
+    border-radius: 50%;
+}
+
+@for $i from 2 through 4 {
+    .ntu-round-x#{$i} {
+        border-radius: calc(var(--ntu-border-radius)*$i);
+    }
+    
+    .ntu-c-round-x#{$i}>* {
+        border-radius: calc(var(--ntu-border-radius)*$i);
+    }
+}

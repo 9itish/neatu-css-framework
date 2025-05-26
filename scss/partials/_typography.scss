@@ -1,0 +1,117 @@
+@use 'variables' as *;
+
+// Font sizes are responsive via --ntu-base-font-size, defined in variables.scss for each breakpoint.
+
+.ntu-tx-ac {
+    text-align: center;
+}
+
+.ntu-tx-as {
+    text-align: start;
+}
+
+.ntu-tx-ae {
+    text-align: end;
+}
+
+.ntu-tx-xs {
+    font-size: 70%;
+}
+
+.ntu-tx-sm {
+    font-size: 85%;
+}
+
+.ntu-tx-lg {
+    font-size: 115%;
+}
+
+.ntu-tx-xl {
+    font-size: 130%;
+}
+
+$index: 0;
+
+$elements: (h1, h2, h3, h4, h5, h6, p);
+$multipliers: (2.2, 1.6, 1.4, 1.3, 1.2, 1, 1);
+
+@for $i from 1 through length($elements) {
+
+  $element: nth($elements, $i);
+
+  #{$element} {
+    margin: calc(max(6 - $i, 4) * var(--ntu-base-margin)) 0;
+    font-size: calc(nth($multipliers, $i) * var(--ntu-base-font-size));
+  }
+} 
+
+h1, h2, h3, h4, h5, h6, p {
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+}
+
+ol,
+ul {
+    padding-left: calc(var(--ntu-base-padding) * 6);
+    margin: calc(var(--ntu-base-margin) * 6) 0;
+
+    li {
+        margin: calc(2 * var(--ntu-base-margin)) 0;
+    }
+}
+
+pre code {
+    padding: calc(var(--ntu-base-padding)*4) calc(var(--ntu-base-padding) * 2);
+}
+
+code {
+    background: #aaa;
+    background: color-mix(in srgb, white 90%, var(--ntu-text-color));
+    display: inline-block;
+    padding: calc(var(--ntu-base-padding)/4) calc(var(--ntu-base-padding) * 2);
+}
+
+.ntu-tx-em {
+    font-weight: bold;
+}
+
+.ntu-tx-ul {
+    text-decoration: underline;
+    text-decoration-thickness: 0.1em;
+}
+
+.ntu-tx-no-ul {
+    text-decoration: none;
+}
+
+.ntu-tx-clin {
+    color: currentColor;
+}
+
+a.ntu-tx-clin:hover {
+    color: currentColor;
+    color: color-mix(in srgb, currentColor 80%, black);
+}
+
+pre code {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #999 transparent; /* Firefox */
+}
+
+/* Chrome, Edge, Safari */
+pre code::-webkit-scrollbar {
+  width: 6px;
+  height: 6px; /* for horizontal scroll if needed */
+}
+
+pre code::-webkit-scrollbar-thumb {
+  background-color: #999;
+  border-radius: 10px;
+}
+
+pre code::-webkit-scrollbar-track {
+  background: transparent;
+}

@@ -1,50 +1,39 @@
-@import 'variables';
+@use 'partials/variables';
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+@use 'partials/grid';
+@use 'partials/flexbox';
 
-html {
-    font-size: var(--n-base-font-size);
-    line-height: 1.6;
-}
+@use 'partials/typography';
 
-@import 'grid';
-@import 'flexbox';
+@use 'partials/table';
 
-@import 'typography';
+@use 'partials/navigation';
+@use 'partials/pagination';
 
-@import 'table';
+@use 'partials/image-figure';
+@use 'partials/accordion';
 
-@import 'navigation';
-@import 'pagination';
+@use 'partials/form';
 
-@import 'image-figure';
-@import 'accordion';
+@use 'partials/shadow-border-outline';
 
-@import 'form';
+@use 'partials/alerts';
+@use 'partials/tabs-pills';
+@use 'partials/labels';
 
-@import 'shadow-border-outline';
+@use 'partials/cards';
 
-@import 'alerts';
-@import 'tabs-pills';
-@import 'labels';
+@use 'partials/buttons';
 
-@import 'cards';
+@use 'partials/item-group';
 
-@import 'buttons';
-
-@import 'item-group';
-
-@import 'padding-margin';
-@import 'round';
+@use 'partials/padding-margin';
+@use 'partials/round';
 
 
 hr {
     color: color-mix(in srgb, currentColor 25%, white);
-    margin: calc(var(--n-base-margin)*2) 0;
+    margin: calc(var(--ntu-base-margin)*2) 0;
     border-bottom: none;
 }
 

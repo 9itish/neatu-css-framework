@@ -1,18 +1,18 @@
-.n-acc-item-head {
-    padding: 0 calc(var(--n-base-padding)*10);
+.ntu-acc-item-head {
+    padding: 0 calc(var(--ntu-base-padding)*10);
     overflow: auto;
     cursor: pointer;
     background-color: #eee;
     font-weight: bold;
 }
 
-.n-acc-item-body {
+.ntu-acc-item-body {
     padding: 10px;
     height: 0;
     overflow: hidden;
     transition: height 0.3s ease;
 }
 
-.n-acc-item.n-acc-stay-open .n-acc-item-body {
+.ntu-acc-item.ntu-acc-stay-open .ntu-acc-item-body {
     height: auto;
 }

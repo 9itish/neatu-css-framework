@@ -1,0 +1,48 @@
+.ntu-bshadow {
+  box-shadow: 0 0 2px #ccc, 0 0 6px #eee;
+  padding: calc(var(--ntu-base-padding) * 3);
+}
+
+.ntu-bshadow-curr-clr {
+  box-shadow: 0 0 2px color-mix(in srgb, currentColor 40%, white), 0 0 6px color-mix(in srgb, currentColor 10%, white);
+  padding: calc(var(--ntu-base-padding) * 3);
+}
+
+.ntu-border,
+.ntu-outline,
+.ntu-btn.ntu-outline {
+  border: var(--ntu-border-width) solid currentColor;
+  padding: calc(var(--ntu-base-padding) * 3);
+}
+
+.ntu-border-x2,
+.ntu-outline-x2,
+.ntu-btn.ntu-outline-x2 {
+  border: calc(var(--ntu-border-width) * 2) solid currentColor;
+}
+
+.ntu-btn.ntu-border-x2 {
+  border: calc(var(--ntu-border-width) * 2) solid rgba(0, 0, 0, 0.3);
+}
+
+.ntu-border-x3,
+.ntu-outline-x3,
+.ntu-btn.ntu-outline-x3 {
+  border: calc(var(--ntu-border-width) * 3) solid currentColor;
+}
+
+.ntu-btn.ntu-border-x3 {
+  border: calc(var(--ntu-border-width) * 3) solid rgba(0, 0, 0, 0.3);
+}
+
+.ntu-border-x4,
+.ntu-outline-x4,
+.ntu-btn.ntu-outline-x4 {
+  border: calc(var(--ntu-border-width) * 4) solid currentColor;
+}
+
+.ntu-btn.ntu-border-x4 {
+  border: calc(var(--ntu-border-width) * 4) solid rgba(0, 0, 0, 0.3);
+}
+
+/*# sourceMappingURL=shadow-border-outline.css.map */

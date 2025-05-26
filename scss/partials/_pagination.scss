@@ -1,5 +1,5 @@
-.pagination {
-    color: var(--n-gray);
+.ntu-page {
+    color: var(--ntu-highlight-text-color);
     list-style: none;
     display: flex;
     padding: 0;
@@ -10,11 +10,11 @@
 
         &:hover {
             background: color-mix(in srgb, currentColor 5%, white);
-            color: var(--n-text-color);
+            color: var(--ntu-text-color);
         }
 
         &.disabled {
-            color: var(--n-gray);
+            color: var(--ntu-highlight-text-color);
             pointer-events: none;
             background: color-mix(in srgb, currentColor 5%, white);
         }
@@ -26,36 +26,36 @@
         }
     }
 
-    &.pag-disjoint {
+    &.ntu-page-djt {
         li {
             margin: 0 0.2rem;
         }
     }
 
-    &.pag-bordered {
+    &.ntu-page-bdr {
 
         li {
             border: 1px solid currentColor;
         }
 
         li:hover {
-            border-color: var(--n-gray);
+            border-color: var(--ntu-highlight-text-color);
         }
 
-        &:not(.pag-disjoint) li {
+        &:not(.ntu-page-djt) li {
             border-right: none;
         }
 
-        &:not(.pag-disjoint) li:last-child,
-        &.pag-disjoint li {
+        &:not(.ntu-page-djt) li:last-child,
+        &.ntu-page-djt li {
             border-right: 1px solid currentColor;
 
             &:hover {
-                border-color: var(--n-gray);
+                border-color: var(--ntu-highlight-text-color);
             }
         }
 
-        &:not(.pag-disjoint) li.disabled:last-child {
+        &:not(.ntu-page-djt) li.disabled:last-child {
             border-right: none;
         }
 
@@ -71,13 +71,13 @@
     }
 }
 
-nav ul.pagination li.disabled {
-    color: var(--n-gray);
+nav ul.ntu-page li.disabled {
+    color: var(--ntu-highlight-text-color);
 }
 
-.pagination li a {
+.ntu-page li a {
     text-decoration: none;
     color: currentColor;
-    padding: calc(2 * var(--n-base-padding)) calc(4 * var(--n-base-padding));
+    padding: calc(2 * var(--ntu-base-padding)) calc(4 * var(--ntu-base-padding));
     display: inline-block;
 }

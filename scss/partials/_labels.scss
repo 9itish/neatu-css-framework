@@ -1,0 +1,97 @@
+@use 'variables' as variables;
+
+.ntu-bgh {
+    background: black;
+    color: white;
+}
+
+.ntu-bglh {
+    color: black;
+    background: white;
+}
+
+.ntu-bgh,
+.ntu-bglh,
+.ntu-tch,
+.ntu-tclh {
+    cursor: pointer;
+    transition: 0.2s all;
+}
+
+.ntu-tc-white {
+    color: white;
+}
+
+.ntu-tc-black {
+    color: white;
+}
+
+@each $name, $color in variables.$colors {
+
+    @if not index(('text', 'border'), $name) {
+        .ntu-tc-#{$name},
+        .ntu-tch-#{$name} {
+            color: var(--ntu-#{$name}-color);
+        }
+
+        .ntu-tcl-#{$name},
+        .ntu-tclh-#{$name} {
+            color: color-mix(in srgb, var(--ntu-#{$name}-color) 50%, white);
+
+            &.ntu-alert,
+            &.ntu-page li {
+                color: var(--ntu-#{$name}-color);
+            }
+        }
+
+        .ntu-tch-#{$name} {
+            &:hover {
+                color: color-mix(in srgb, var(--ntu-#{$name}-color) 85%, black);
+            }
+
+            &.ntu-alert:hover,
+            &.ntu-page li:hover {
+                color: white;
+                background: color-mix(in srgb, var(--ntu-#{$name}-color) 85%, black);
+            }
+        }
+
+        .ntu-tclh-#{$name} {
+            &:hover {
+                color: color-mix(in srgb, var(--ntu-#{$name}-color) 70%, white);
+            }
+
+            &.ntu-alert:hover,
+            &.ntu-page li:hover {
+                color: black;
+                background: color-mix(in srgb, var(--ntu-#{$name}-color) 50%, white);
+            }
+        }
+
+        .ntu-bg-#{$name},
+        .ntu-bgh-#{$name} {
+            background: var(--ntu-#{$name}-color);
+        }
+
+        .ntu-bgl-#{$name},
+        .ntu-bglh-#{$name} {
+            background: color-mix(in srgb, var(--ntu-#{$name}-color) 50%, white);
+        }
+
+        .ntu-bgle-#{$name} {
+            background: color-mix(in srgb, var(--ntu-#{$name}-color) 15%, white);
+        }
+
+        .ntu-bgh-#{$name} {
+            &:hover {
+                background: color-mix(in srgb, var(--ntu-#{$name}-color) 85%, black);
+            }
+        }
+
+        .ntu-bglh-#{$name} {
+            &:hover {
+                background: color-mix(in srgb, var(--ntu-#{$name}-color) 70%, white);
+            }
+        }
+    }
+}

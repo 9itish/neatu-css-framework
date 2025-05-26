@@ -1,0 +1,60 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: var(--ntu-base-font-size);
+  line-height: 1.6;
+}
+
+:root {
+  --ntu-base-unit: 1rem;
+  --ntu-base-font-size: 16px;
+  --ntu-base-gap: 0.2rem;
+  --ntu-base-padding: 0.15rem;
+  --ntu-base-margin: 0.15rem;
+  --ntu-border-width: 1px;
+  --ntu-border-radius: 0.2em;
+  --ntu-help-color: #045f24;
+  --ntu-highlight-text-color: #888;
+  --ntu-highlight-text-color: #666;
+  --ntu-success-color: #4CAF50;
+  --ntu-failure-color: #E53935;
+  --ntu-warning-color: #F57C00;
+  --ntu-neutral-color: #2196F3;
+  --ntu-text-color: #222222;
+  --ntu-border-color: #AAAAAA;
+  --ntu-brand-primary-color: #00796B;
+  --ntu-brand-secondary-color: #0C3671;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --ntu-base-padding: 0.18rem;
+    --ntu-base-margin: 0.18rem;
+  }
+}
+@media (min-width: 992px) {
+  :root {
+    --ntu-base-padding: 0.2rem;
+    --ntu-base-margin: 0.2rem;
+    --ntu-base-font-size: 17px;
+  }
+}
+@media (min-width: 1200px) {
+  :root {
+    --ntu-base-padding: 0.24rem;
+    --ntu-base-margin: 0.24rem;
+  }
+}
+@media (min-width: 1400px) {
+  :root {
+    --ntu-base-padding: 0.28rem;
+    --ntu-base-margin: 0.28rem;
+    --ntu-base-font-size: 18px;
+  }
+}
+
+/*# sourceMappingURL=base.css.map */

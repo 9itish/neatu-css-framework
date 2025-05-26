@@ -1,0 +1,33 @@
+.ntu-bshadow {
+    box-shadow: 0 0 2px #ccc, 0 0 6px #eee;
+    padding: calc(var(--ntu-base-padding)*3);
+}
+
+.ntu-bshadow-curr-clr {
+    box-shadow: 0 0 2px color-mix(in srgb, currentColor 40%, white), 0 0 6px color-mix(in srgb, currentColor 10%, white);
+    padding: calc(var(--ntu-base-padding)*3);
+}
+
+.ntu-border,
+.ntu-outline,
+.ntu-btn.ntu-outline {
+    border: var(--ntu-border-width) solid currentColor;
+    padding: calc(var(--ntu-base-padding)*3);
+}
+
+.ntu-btn[class*="ntu-outline"] {
+    background: transparent;
+}
+
+@for $i from 2 through 4 {
+
+    .ntu-border-x#{$i},
+    .ntu-outline-x#{$i},
+    .ntu-btn.ntu-outline-x#{$i} {
+        border: calc(var(--ntu-border-width)*$i) solid currentColor;
+    }
+
+    .ntu-btn.ntu-border-x#{$i} {
+        border: calc(var(--ntu-border-width)*$i) solid rgba(0, 0, 0, 0.3);
+    }
+}

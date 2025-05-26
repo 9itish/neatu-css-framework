@@ -1,0 +1,305 @@
+@use 'variables' as *;
+
+@use 'base.scss';
+
+// Core flex container class uses full prefix for clarity and collision avoidance.
+// Utility modifier classes use shorter 'ntu-' prefix for developer convenience and brevity.
+// Combining them (e.g., .ntu-flex.ntu-fac) gets the best of both worlds:
+//   - Scoped, unique base class for framework identification
+//   - Short, easy-to-write utility classes for quick styling tweaks
+
+// A flex-item could have the --ntu-flex-item class if it needs it but not actually necessary here.
+
+.ntu-flex {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+
+    &.ntu-fac {
+        align-items: center;
+    }
+
+    &.ntu-fash {
+        align-items: stretch;
+    }
+
+    &.ntu-fae {
+        align-items: end;
+    }
+
+    &.ntu-fdc {
+        flex-direction: column;
+    }
+
+    &.ntu-fjsb {
+        justify-content: space-between;
+    }
+
+    &.ntu-fjs {
+        justify-content: start;
+    }
+}
+
+// When the flex parent has ntu-mo-hun class, set the width of all direct children to 100% by default. This gives a mobile-frist approach.
+.ntu-flex.ntu-mo-hun>* {
+    width: 100%;
+}
+
+// The flex property is 0 1 auto by default for flex-items (.ie, direct flex children). This means that items won;t grow by default but will shrink if needed.
+// Here I am setting it to 1 0 auto for all classes that end with `a` because the `a` here stands for auto-fill and 1 0 auto will make the flex-items take up all extra space.
+.ntu-flex-aw-1234a>*,
+.ntu-flex-aw-112a>*,
+.ntu-flex-aw-22334a>* {
+    flex: 1 0 auto;
+}
+
+.ntu-gap {
+    gap: var(--ntu-base-gap);
+}
+
+@for $i from 1 through 5 {
+    .ntu-gap-x#{$i} {
+        gap: calc(var(--ntu-base-gap)* $i);
+    }
+}
+
+.ntu-w-fc {
+    width: fit-content;
+}
+
+@each $fraction, $width in $fractional-widths {
+  .ntu-ffw-#{$fraction}, .ntu-fw.ntu-ffw-#{$fraction} {
+    width: $width;
+  }
+}
+
+@for $i from 1 through 20 {
+    .ntu-faw-#{$i*5}, .ntu-fw.ntu-faw-#{$i*5} {
+        width: $i * 5%;
+    }
+}
+
+// Force all flex children to be equal width on all screen sizes by setting flex-basis to 0. Setting the flex-basis to 0 makes them divide space equally like well-behaved siblings.
+.ntu-flex.ntu-flex-eq-aw>* {
+    flex: 1 1 0;
+}
+
+// This only applies between xs and s widths. It’s a special case for when content isn't wide enough to fill the screen (≤ 575px in default settings), so we allow fixed percentage widths for better control.
+@media (min-width: map-get($viewport-widths, 'xs')) and (max-width: calc(map-get($viewport-widths, 's') - 1px)) {
+    @for $i from 1 through 20 {
+        .ntu-oxsw-#{$i*5} {
+            width: $i * 5%;
+        }
+    }
+}
+
+@media (min-width: map-get($viewport-widths, 's')) {
+
+    // The ntu-flex-eq-sw class means eual widht of small screens. Again, this is possible because flex-basis has been set to 0 making children ignore their content.
+    .ntu-flex.ntu-flex-eq-sw>* {
+        flex: 1 1 0;
+    }
+
+    // All flex-aw-* classes that start with 1 mean that this particular rule will force each child to take up the entire container width.
+    .ntu-flex-aw-12,
+    .ntu-flex-aw-112,
+    .ntu-flex-aw-112a,
+    .ntu-flex-aw-1234,
+    .ntu-flex-aw-1234a {
+        &>* {
+            width: 100%;
+        }
+    }
+
+    // These classes apply when we want to split the available space in a single row among two flex-items.
+    .ntu-flex-aw-2,
+    .ntu-flex-aw-2223,
+    .ntu-flex-aw-2223a,
+    .ntu-flex-aw-22334,
+    .ntu-flex-aw-22334a {
+        &>* {
+            width: 50%;
+        }
+    }
+
+    // Sometimes, we would want specific items to have certain width. We can set the width with ntu-fsw-* classes.
+    // They may not be enough by themsleves if any of the eq or aw classes are being applied.
+    // In such cases, we use the ntu-fw class on the parent for higher specificity. 
+    @each $fraction, $width in $fractional-widths {
+        .ntu-fsw-#{$fraction}, .ntu-fw.ntu-fsw-#{$fraction} {
+            width: $width;
+        }
+    }
+
+    @for $i from 1 through 20 {
+        .ntu-fsw-#{$i*5}, .ntu-fw.ntu-fsw-#{$i*5} {
+            width: $i * 5%;
+        }
+    }
+
+}
+
+@media (min-width: map-get($viewport-widths, 'm')) {
+
+    .ntu-flex.ntu-flex-eq-mw>* {
+        flex: 1 1 0;
+    }
+
+    // For `m` sizes the width that will apply is indicated by the second digit.
+    // These classes will only have one item taking up the entire widht on medium screens.
+    // So, we have set the width to 100%
+    .ntu-flex-aw-112,
+    .ntu-flex-aw-112a {
+        &>* {
+            width: 100%;
+        }
+    }
+
+    // That's the reason all widths here are 50%. 
+    .ntu-flex-aw-12,
+    .ntu-flex-aw-1223,
+    .ntu-flex-aw-2223,
+    .ntu-flex-aw-2223a,
+    .ntu-flex-aw-1234,
+    .ntu-flex-aw-1234a,
+    .ntu-flex-aw-22334,
+    .ntu-flex-aw-22334a {
+        &>* {
+            width: 50%;
+        }
+    }
+
+    @each $fraction, $width in $fractional-widths {
+        .ntu-fmw-#{$fraction}, .ntu-fw.ntu-fmw-#{$fraction} {
+            width: $width;
+        }
+    }
+
+    @for $i from 1 through 20 {
+        .ntu-fmw-#{$i*5}, .ntu-fw.ntu-fmw-#{$i*5} {
+            width: $i * 5%;
+        }
+    }
+}
+
+@media (min-width: map-get($viewport-widths, 'l')) {
+
+    .ntu-flex.ntu-flex-eq-lw>* {
+        flex: 1 1 0;
+    }
+
+    .ntu-flex-1223,
+    .ntu-flex-aw-2223,
+    .ntu-flex-aw-112,
+    .ntu-flex-aw-112a {
+        &>* {
+            width: 50%;
+        }
+    }
+
+    .ntu-flex-aw-1234,
+    .ntu-flex-aw-1234a,
+    .ntu-flex-aw-22334,
+    .ntu-flex-aw-22334a {
+        &>* {
+            width: 33.333333%;
+        }
+    }
+
+    @each $fraction, $width in $fractional-widths {
+        .ntu-flw-#{$fraction}, .ntu-fw.ntu-flw-#{$fraction} {
+            width: $width;
+        }
+    }
+
+    @for $i from 1 through 20 {
+        .ntu-flw-#{$i*5}, .ntu-fw.ntu-flw-#{$i*5} {
+            width: $i * 5%;
+        }
+    }
+
+}
+
+@media (min-width: map-get($viewport-widths, 'xl')) {
+
+    .ntu-flex.ntu-flex-eq-xlw>* {
+        flex: 1 1 0;
+    }
+
+    .ntu-flex-aw-1234,
+    .ntu-flex-aw-1234a {
+        &>* {
+            width: 25%;
+        }
+    }
+
+    .ntu-flex-aw-1223,
+    .ntu-flex-aw-2223,
+    .ntu-flex-aw-22334,
+    .ntu-flex-aw-22334a {
+        &>* {
+            width: 33.33333%;
+        }
+    }
+
+    @each $fraction, $width in $fractional-widths {
+        .ntu-fxlw-#{$fraction}, .ntu-fw.ntu-fxlw-#{$fraction} {
+            width: $width;
+        }
+    }
+
+    @for $i from 1 through 20 {
+        .ntu-fxlw-#{$i*5}, .ntu-fw.ntu-fxlw-#{$i*5} {
+            width: $i * 5%;
+        }
+    }
+
+}
+
+@media (min-width: map-get($viewport-widths, 'xxl')) {
+
+    .ntu-flex.ntu-flex-eq-xxlw>* {
+        flex: 1 1 0;
+    }
+
+    .ntu-flex-aw-22334,
+    .ntu-flex-aw-22334a {
+        &>* {
+            width: 25%;
+        }
+    }
+
+    @each $fraction, $width in $fractional-widths {
+        .ntu-fxxlw-#{$fraction}, .ntu-fw.ntu-fxxlw-#{$fraction} {
+            width: $width;
+        }
+    }
+
+    @for $i from 1 through 20 {
+        .ntu-fxxlw-#{$i*5}, .ntu-fw.ntu-fxxlw-#{$i*5} {
+            width: $i * 5%;
+        }
+    }
+
+}
+
+@media (min-width: map-get($viewport-widths, 's')) and (max-width: calc(map-get($viewport-widths, 'm') - 1px)) {
+    @for $i from 1 through 20 {
+        .ntu-osw-#{$i*5} {
+            width: $i * 5%;
+        }
+    }
+}
+
+@media (min-width: map-get($viewport-widths, 'm')) and (max-width: calc(map-get($viewport-widths, 'l') - 1px)) {
+    @for $i from 1 through 20 {
+        .ntu-omw-#{$i*5} {
+            width: $i * 5%;
+        }
+    }
+}
+
+.ntu-flex-fw .ntu-fw {
+    flex: 0 0 auto;
+}
+

@@ -1,0 +1,28 @@
+$colors: (
+    'success': #4CAF50,
+    'error': #E53935,
+    'warning': #F57C00,
+    'info': #2196F3,
+    'text': #222222,
+    'border': #AAAAAA,
+    'brand-primary': #00796B,
+    'brand-secondary': #0C3671
+);
+
+
+
+$viewport-widths: (
+    'xs': 440px,
+    's': 576px,
+    'm': 768px,
+    'l': 992px,
+    'xl': 1200px,
+    'xxl': 1400px
+);
+
+$fractional-widths: (
+  '1-6': 16.6666667%,
+  '1-3': 33.33333333%,
+  '2-3': 66.666666667%
+);
+
