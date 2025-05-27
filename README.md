@@ -22,8 +22,8 @@ I’m continuously refining it, and I’m open to feedback, ideas, or pull reque
 
 ```
 css/
-├── neatu.css           # Compiled main CSS
-├── neatu.min.css       # Minified CSS
+├── neatu.css         # Compiled main CSS
+├── neatu.min.css     # Minified CSS
 ├── ... more files    # More files
 scss/
 ├── _accordion.scss   # Accordion Partials
